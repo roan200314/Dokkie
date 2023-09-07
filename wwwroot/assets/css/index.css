@@ -1,3 +1,65 @@
 body {
     font-size: 1.2em;
+    background-color: #e8e8e8;
+    font-family: 'Anton', sans-serif;
+}
+
+
+#naam{
+font-size: 33px;
+display: flex;
+justify-content: start;
+padding-right: 45px;
+color: #5c20a1;
+text-decoration: none;
+padding-top: 10px;
+padding-left: 5px;
+padding-right: 15px;
+}
+
+.navbar {
+      /* background-color: forestgreen; */
+      text-decoration: none;
+      display: flex;
+      align-content: center;
+      flex-direction: row;
+      /* border: 1px solid black; */
+      font-size: 24px;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+}
+
+.topnav a {
+    padding-left: 15px;
+    text-decoration: none;
+    /* color: #E3B448; */
+    color: #5c20a1;
+}
+
+.topnav a:hover {
+    color: #D2A337;
+}
+
+.navLog  {
+    position: absolute;
+    right: 0;
+    padding-right: 15px;
+}
+
+i {
+    padding-left: 19px;
+}
+
+/* ///////////////////////////////// */
+
+.rechts {
+    position: absolute;
+    right: 150px;
+}
+
+.onderwerp {
+    padding-top: 60px;
+    padding-left: 85px;
+    font-size: 52px;
+    color: #5c20a1;
 }
