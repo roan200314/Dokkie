@@ -15,6 +15,7 @@
         "noUnusedParameters": true,
         "noImplicitReturns": true,
         "skipLibCheck": true
+
     },
     "include": ["src", "vite.config.ts", "global.d.ts"]
 }
