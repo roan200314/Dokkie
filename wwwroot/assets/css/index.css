@@ -3,14 +3,40 @@ body {
     background-color: #e8e8e8;
     font-family: 'Anton', sans-serif;
 }
+.grid-container {
 
+    display: grid;
 
-.rechts {
-    position: absolute;
-    right: 150px;
-}
-
-.onderwerp {
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: 100px 1fr 1fr 100px;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  
+  .grid-container .rechts {
+        display: flex;
+        grid-row-start: 1;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 5;
+      position: absolute;
+      right: 150px;
+    }
+    .grid-container .info {
+        display: grid;
+        grid-row-start: 1;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .grid-container .onderwerp {
+    display: flex;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
     padding-top: 60px;
     padding-left: 85px;
     font-size: 52px;
@@ -19,19 +45,58 @@ body {
 }
 
 .over {
-
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 
 .subh {
-    color: #5c20a1;
-    text-align: center;
-    padding-top: 103px;
-    font-size: 45px;
+    padding-top: 20px;
+ text-align: center;
+ color: #5c20a1;
 }
 
 .infotext {
+text-align: center;
+color: #5c20a1;
+}
+
+.grid-container .info {
+    display: grid;
+    grid-row-start: 2;
+    grid-row-end: 9;
+    grid-column-start: 1;
+    grid-column-end: 13;
+}
+.grid-container #foto_computer {
     display: flex;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+    grid-row-start: 5;
+    grid-row-end: 12;
+    grid-column-start: 7;
+    grid-column-end: 9;
+    /* display: block; */
+}
+
+.grid-container #foto_telefoon {
+    display: none;
+}
+
+@media only screen and (max-width: 850px) {
+
+    #foto_computer {
+        display: none;
+    }
+    
+    #foto_telefoon {
+        display: block;
+        width: 400px;
+        object-position: 80px 50px;
+    }
+
+
+    .onderwerp {
+        font-size: 22px;
+        position: relative;
+        z-index: 100;
+    }
 }

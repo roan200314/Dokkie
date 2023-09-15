@@ -1,4 +1,6 @@
 
+
+
 #naam{
     font-size: 33px;
     display: flex;
@@ -12,18 +14,18 @@
     }
     
     .navbar {
-          /* background-color: forestgreen; */
           text-decoration: none;
           display: flex;
           align-content: center;
           flex-direction: row;
-          /* border: 1px solid black; */
           font-size: 24px;
           margin-bottom: 15px;
           padding-bottom: 15px;
+          padding-top: 5px;
     }
     
     .topnav a {
+
         padding-left: 15px;
         text-decoration: none;
         /* color: #E3B448; */
@@ -34,12 +36,74 @@
         color: #D2A337;
     }
     
-    .navLog  {
+    .navLog {
         position: absolute;
         right: 0;
         padding-right: 15px;
     }
+
+    .navLog a {
+        text-decoration: none;
+        
+    }
+
+    .navLog a:hover {
+        color: #D2A337;
+
+    }
+
+    .respdiv .icon {
+        display: none;
+    }
     
     i {
-        padding-left: 19px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
+
+
+    /* /////////////////////////////////// */
+    /* responsive */
+
+    @media only screen and (max-width: 850px) {
+
+        #naam{
+            font-size: 33px;
+            display: flex;
+            justify-content: start;
+            padding-right: 45px;
+            color: #5c20a1;
+            text-decoration: none;
+            padding-top: 10px;
+            padding-left: 5px;
+            padding-right: 15px;
+            }
+
+         .navbar a:not(:first-child)   {display: none;}
+
+         .navLog {
+            display: none;
+         }
+
+        .respdiv a.icon {
+                position: absolute;
+                right: 0;
+                display: block;
+            } 
+
+            .navbar.responsive {
+                position: relative;
+            }
+
+            .navbar.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+              }
+        }
+    

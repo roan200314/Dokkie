@@ -6,37 +6,50 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">    
-        <link rel="stylesheet" href="../wwwroot/assets/css/index.css" />
-        <link rel="stylesheet" href="../wwwroot/assets/css/navbar.css" />
+        <link rel="stylesheet" href="/assets/css/index.css" />
+        <link rel="stylesheet" href="/assets/css/navbar.css" />
+        <script src="../src/javascript.js" async></script>
         <script src="https://kit.fontawesome.com/885f24b8a4.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Dokkie | Home</title>
     </head>
     <body>
-        <nav class="navbar">
-                <a href="index.html" id="naam">Dokki€</a>
+
+        <div class="home">
+            <a href="index.html" id="naam">Dokki€</a>
+        </div>
+        <nav class="navbar" id="mynavbar">
             <div class="topnav">
                 <a href="hboictcloud.html">Home</a>
-                <a href="#">Over ons</a>
-                <a href="#">Help</a>
+                <a href="help.html">Over ons</a>
+                <a href="overons.html">Help</a>
                 <a href="faq.html">FAQ</a>
+            </div>
                 <div class="navLog">
                     <a href="inloggen.html">Inloggen</a>
                     <i class="fa-solid fa-grip-lines-vertical"></i>
-                    <a href="registreren.html">Registreren</a>
+                    <a href="registreren.html">Registreren</a>                   
                 </div>
-            </div>
+                <div class="respdiv">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </div>
         </nav>
         
 
-        <main class="container">
+    <main class="container">
+        <div class="grid-container">
             <div class="info">
                 <div class="rechts">
-                <img src="../pics/homepage.jpg">
+                <img id="foto_computer" src="/assets/pics/homepage.jpg">
+                <img id="foto_telefoon" src="/assets/pics/responsivehomepage.jpg">
                 </div>
                 <h1 class="onderwerp">
                     Krijg makkelijk en <br> snel je geld terug <br> met Dokki€ 
                 </h1>
             </div>
+        </div>
             <div class="over">
             <h2 class="subh">Over ons</h2>
             <p class="infotext">
@@ -48,5 +61,6 @@
         </main>
 
         <script src="/src/index.ts" type="module"></script>
+    <!-- </div> -->
     </body>
 </html>
