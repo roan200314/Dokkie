@@ -77,20 +77,30 @@ color: #5c20a1;
     /* display: block; */
 }
 
-.grid-container #foto_telefoon {
+#foto_telefoon {
     display: none;
 }
 
 @media only screen and (max-width: 850px) {
 
-    #foto_computer {
+    .grid-container .onderwerp {
+        font-size: 46px;
+    }
+
+    .grid-container #foto_computer {
         display: none;
+    }
+    .grid-container .rechts {
+        position: relative;
+        width: 100%;
     }
     
     #foto_telefoon {
+        position: absolute;
+        top: 328px;
         display: block;
         width: 400px;
-        object-position: 80px 50px;
+        height: 400px;
     }
 
 
