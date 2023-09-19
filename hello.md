@@ -20,3 +20,6 @@ Eerste week heb ik vooral besteed aan de landingspagina. Zo was ik met losse pol
 
 Tweede week ben ik bezig geweest met het responisive maken en teksten op het scherm te zetten. 
 Ook ben ik begonnen met een pagina maken om een uitje op het scherm te zetten.
+
+# retro spective
+
