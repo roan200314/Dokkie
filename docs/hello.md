@@ -21,29 +21,7 @@ Eerste week heb ik vooral besteed aan de landingspagina. Zo was ik met losse pol
 Tweede week ben ik bezig geweest met het responisive maken en teksten op het scherm te zetten. 
 Ook ben ik begonnen met een pagina maken om een uitje op het scherm te zetten.
 
-# retro spective
 
-### -nieuw
-- Meer documenteren: Ik moet meer gaan documenteren wat ik die dag heb gedaan of bij code neerzetten wat ik heb gedaan.
-
--Planning voor de dag maken: Het zou handiger zijn om een planning te maken voor wat ik voor de dag zal maken.
-
-
-### - Herhaal
-
--  Vaak code comitten: Ik commit me code vaak als ik een verandering maak aan me pagina.
-
-- vragen stellen: Ik stel veel vragen, en zal daar verder mee gaan zodat ik meer leer.
-
-- Op tijd komen: Moet zoals gewoonlijk optijd komen zodat ik geen belangrijke informatie mis.
-
-### - Stop
-
-- Niet aan meerdere issues tegelijk werken: Hierdoor wordt het lastig om op 1 ding te focussen en komt er vertraging.
-
-- Niet meer dan 1 taal gebruiken: Dit deed ik even aan het begin, maar ik heb mezelf hier snel op gecorriceerd dat ik alleen nederlands gebruik.
-
-!("")
 
 
 
