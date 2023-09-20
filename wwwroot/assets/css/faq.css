@@ -1,3 +1,11 @@
-.titel {
-    text-align: center;
+body {
+    font-size: 1.2em;
+    background-color: #e8e8e8;
+    font-family: 'Anton', sans-serif;
+}
+
+.container {
+    background-color: #eddbda;
+    width: 33%;
+    border-radius: 33%;
 }
