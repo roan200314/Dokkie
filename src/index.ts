@@ -7,4 +7,5 @@ function app(): void {
     console.log("Hello world from TypeScript!");
 }
 
+
 app();
