@@ -1,29 +1,27 @@
-import { api, session, url } from "@hboictcloud/api";
+import { runQuery } from "./utils/queryutil";
 
-function uitje() :void {
-    
-    const uitje: HTMLFormElement = document.getElementById("formUitje") as HTMLFormElement;
-    uitje.addEventListener("submit", async (event) => { 
+// // Function to send the data to the database
+// // Get the form input values
+// const emailInput = document.getElementById('email') as HTMLInputElement | null;
+// const uitjeInput = document.getElementById('uit') as HTMLInputElement | null;
+// const prijsInput = document.getElementById('prijs') as HTMLInputElement | null;
 
-        // Remove error message if exists
-        document.getElementById("error")?.remove();
+// if (emailInput && uitjeInput && prijsInput) {
+//   const email = emailInput.value;
+//   const uitje = uitjeInput.value;
+//   const prijs = prijsInput.value;
 
-        // Get form data
-        const formData: FormData = new FormData(uitje);
-        const formDataObject: { [key: string]: string } = {};
+//   // Create an object with the data
+//   const data = {
+//     email,
+//     uitje,
+//     prijs,
+//     apiKey: 'pb1a2324_hellyr.RJgG1hyQcU20fHrQ', // Your API key
+//     username: 'pb1a2324_hellyr', // Your username
+//   };
 
-        // Convert formData to a JavaScript object
-        formData.forEach((value, key) => {
-            formDataObject[key] = value as string;
-    });
+//   // ... rest of the code remains the same
+// } else {
+//   console.error('One or more input fields not found');
+// }
 
-    const email: string = formDataObject["email"];
-    const uit: string = formDataObject["uit"];
-    const prijs: string = formDataObject["prijs"];
-
-    
-});
-
-}
-
-uitje();
