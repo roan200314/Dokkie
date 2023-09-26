@@ -5,7 +5,14 @@ body {
 }
 
 .container {
-    background-color: #eddbda;
-    width: 33%;
-    border-radius: 33%;
+    width: 60%;
+    margin-left: 20%;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 11px;
+    background-color: #5c20a1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 10px #888888;
 }
