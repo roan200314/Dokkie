@@ -1,32 +1,28 @@
 import { runQuery } from "./utils/queryutil";
 
-function uitje() :void {
-    
-    const uitje: HTMLFormElement = document.getElementById("formUitje") as HTMLFormElement;
-    uitje.addEventListener("submit", async (event) => { 
-
-        // Remove error message if exists
-        document.getElementById("error")?.remove();
-
-        // Get form data
-        const formData: FormData = new FormData(uitje);
-        const formDataObject: { [key: string]: string } = {};
-
-        // Convert formData to a JavaScript object
-        formData.forEach((value, key) => {
-            formDataObject[key] = value as string;
-    });
-
-    const email: string = formDataObject["email"];
-    const uit: string = formDataObject["uit"];
-    const prijs: string = formDataObject["prijs"];
-
-
-
-
-});
-
-}
+function zetIn(): void {
+    // Get the form input values
+    const emailInput: HTMLInputElement | null = document.getElementById("email");
+    const uitjeInput: HTMLInputElement | null = document.getElementById("uit");
+    const prijsInput: HTMLInputElement | null = document.getElementById("prijs");
+  
+    if (emailInput && uitjeInput && prijsInput) {
+      const email: string = emailInput.value;
+      const uitje: string = uitjeInput.value;
+      const prijs: string = prijsInput.value;
+  
+      // Log the form data to the console
+      console.log("Email:", email);
+      console.log("Uitje:", uitje);
+      console.log("Prijs:", prijs);
+    } else {
+      console.error("One or more input fields not found");
+    }
+  }
+  
+  
+  
+  
 
 // async function db(params:type) {
 
@@ -36,5 +32,3 @@ function uitje() :void {
 // await runQuery(query, values);
 // }
 
-
-uitje();
