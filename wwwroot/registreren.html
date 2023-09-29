@@ -42,27 +42,28 @@
     <div class="container">
             <div class="inputBox">
                 <span>email</span>
-                <input type="text" name="email" required>
+                <input type="text" id="email" required>
                 <i></i>
             </div>
             <div class="inputBox">
                 <span>Wachtwoord</span>
-                <input type="password" name="password" required>
+                <input type="password" id="password" required>
                 <i></i>
             </div>
 
             <div class="inputBox">
                 <span>Gebruikersnaam</span>
-                <input type="text" name="username" required>
+                <input type="text" id="username" required>
                 <i></i>
             </div>
 
 
             <div class="button">
-                <button id="buttonBestel" type="submit" class="button-73">Registreren</button>
+                <button id="buttonBestel" type="submit" onclick="zetIn()">Registreren</button>
             </div>
         </div>
     </div>
 </form>
 </body>
+<script src="../src/register.ts" type="module" async></script>
 </html>

@@ -83,6 +83,16 @@ color: #5c20a1;
 
 @media only screen and (max-width: 850px) {
 
+    .grid-container {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "."
+          ".";
+      }
+      
     .grid-container .onderwerp {
         font-size: 46px;
     }
@@ -91,11 +101,17 @@ color: #5c20a1;
         display: none;
     }
     .grid-container .rechts {
+
         position: relative;
         width: 100%;
     }
     
     #foto_telefoon {
+        display: grid;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
         position: absolute;
         top: 328px;
         display: block;
@@ -105,6 +121,11 @@ color: #5c20a1;
 
 
     .onderwerp {
+        display: grid;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
         font-size: 22px;
         position: relative;
         z-index: 100;
