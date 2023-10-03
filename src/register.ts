@@ -1,15 +1,18 @@
 import { runQuery } from "./utils/queryutil";
 
+const registeer:HTMLButtonElement = document.getElementById("button_registreer") as HTMLButtonElement; 
+registeer.addEventListener("click", zetIn);
+
 async function zetIn(): Promise<void> {
 
-    const emailInput: HTMLElement | null = document.getElementById("email");
-    const passwordInput: HTMLElement | null = document.getElementById("password");
-    const usernameInput: HTMLElement | null = document.getElementById("username");
+    const emailInput: HTMLInputElement | null = document.getElementById("email");
+    const passwordInput: HTMLInputElement | null = document.getElementById("password");
+    const usernameInput: HTMLInputElement | null = document.getElementById("username");
   
+    const email: string = emailInput.value;
+    const password: string = passwordInput.value;
+    const username: string = usernameInput.value;
     if (emailInput && passwordInput && usernameInput) {
-      const email: string = emailInput;
-      const password: string = passwordInput;
-      const username: string = usernameInput;
   
       // Log the form data to the console
       console.log("Email:", email);
@@ -19,6 +22,7 @@ async function zetIn(): Promise<void> {
       console.error("One or more input fields not found");
     }
     
-    await runQuery("INSERT INTO event (user) VALUES ('email'), ('password'), ('username')");
+    await runQuery("INSERT INTO user (email, password, username) VALUES (?)", [email, password, username]);
+
 
 }

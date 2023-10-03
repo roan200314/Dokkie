@@ -3,17 +3,20 @@ import { runQuery } from "./utils/queryutil";
 const knopUitjeAanmake:HTMLButtonElement = document.getElementById("buttton_uitje") as HTMLButtonElement; 
 knopUitjeAanmake.addEventListener("click", zetIn);
 
+const knopUitjeZien:HTMLButtonElement = document.getElementById("uitjeZien") as HTMLButtonElement; 
+knopUitjeZien.addEventListener("click", laatZien);
+
 
 async function zetIn(): Promise<void> {
-    // Get the form input values
-    const emailInput: HTMLElement | null = document.getElementById("email");
-    const uitjeInput: HTMLElement | null = document.getElementById("uit");
-    const prijsInput: HTMLElement | null = document.getElementById("prijs");
+  const emailInput: HTMLInputElement | null = document.getElementById("email");
+  const uitjeInput: HTMLInputElement | null = document.getElementById("uit");
+  const prijsInput: HTMLInputElement | null = document.getElementById("prijs");
+  // Get the form input values
   
+    const email: string = emailInput.value;
+    const uitje: string = uitjeInput.value;
+    const prijs: string = prijsInput.value;
     if (emailInput && uitjeInput && prijsInput) {
-      const email: string = emailInput;
-      const uitje: string = uitjeInput;
-      const prijs: string = prijsInput;
   
       // Log the form data to the console
       console.log("Email:", email);
@@ -23,9 +26,18 @@ async function zetIn(): Promise<void> {
       console.error("One or more input fields not found");
     }
     
-    await runQuery("INSERT INTO event (description) VALUES ('uitje')");
+    await runQuery("INSERT INTO event (description) VALUES (?)", [uitje]);
+
+    
   }
-  
+
+
+  async function laatZien(): Promise<void> {
+
+    await runQuery("SELECT * FROM event");
+
+      console.log();
+   }
   
   
 
