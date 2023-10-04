@@ -44,8 +44,6 @@ async function zetIn(): Promise<void> {
     //knop om te gaan wijzigen
     const buttonAanpas: HTMLElement | null = document.createElement("button");
     
-    
-    
     // runquery oproepen en data ophalen door een const aan te maken die alles kan pakken
     const resultaat: any[] | undefined = await runQuery("SELECT * FROM event");
     
@@ -77,6 +75,7 @@ async function zetIn(): Promise<void> {
         data.appendChild(paragraph2);
         data.appendChild(buttonJoin);
         data.appendChild(buttonAanpas);
+        
         
         });
 
