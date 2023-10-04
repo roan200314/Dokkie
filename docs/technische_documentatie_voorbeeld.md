@@ -30,5 +30,43 @@ export async function runQuery(query: string, params?: Array<any>): Promise<Arra
 }
 </code>
 
-Met deze code heb ik een maniet gemaakt waarin ik alleen de code hoef aan te roepen om een query in mijn database te zetten.
+Met deze code heb ik een manier gemaakt waarin ik alleen de code hoef aan te roepen om een query in mijn database te zetten. 
 
+Vervolgens heb ik deze code gebruikt:
+
+<code>
+import { runQuery } from "./utils/queryutil";
+
+const knopUitjeAanmake:HTMLButtonElement = document.getElementById("buttton_uitje") as HTMLButtonElement; 
+knopUitjeAanmake.addEventListener("click", zetIn);
+
+const knopUitjeZien:HTMLButtonElement = document.getElementById("uitjeZien") as HTMLButtonElement; 
+knopUitjeZien.addEventListener("click", laatZien);
+
+
+async function zetIn(): Promise<void> {
+  //een uitje aanmaken
+  const emailInput: HTMLInputElement | null = document.getElementById("email");
+  const uitjeInput: HTMLInputElement | null = document.getElementById("uit");
+  const prijsInput: HTMLInputElement | null = document.getElementById("prijs");
+
+  // Form input velden opslaan
+    const email: string = emailInput.value;
+    const uitje: string = uitjeInput.value;
+    const prijs: string = prijsInput.value;
+    if (emailInput && uitjeInput && prijsInput) {
+  
+      // data in console zetten om te checken
+      console.log("Email:", email);
+      console.log("Uitje:", uitje);
+      console.log("Prijs:", prijs);
+    } else {
+      console.error("One or more input fields not found");
+    }
+
+    //inserten in database
+    await runQuery("INSERT INTO event (description, price) VALUES (?)", [uitje, prijs]);   
+  }
+</code>
+
+Om een uitje in mijn database te zetten. 
