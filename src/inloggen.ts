@@ -5,6 +5,7 @@ inloggen.addEventListener("click", ophalen);
 
 async function ophalen(): Promise<void> {
    
+    //email en wachtwoord ophalen
     const emailInput: HTMLInputElement = document.getElementById("email") as HTMLInputElement;
     const passwordInput: HTMLInputElement = document.getElementById("password") as HTMLInputElement;
 
