@@ -5,9 +5,9 @@ registeer.addEventListener("click", zetIn);
 
 async function zetIn(): Promise<void> {
 
-    const emailInput: HTMLInputElement | null = document.getElementById("email");
-    const passwordInput: HTMLInputElement | null = document.getElementById("password");
-    const usernameInput: HTMLInputElement | null = document.getElementById("username");
+    const emailInput: HTMLInputElement = document.getElementById("email") as HTMLInputElement;
+    const passwordInput: HTMLInputElement | null = document.getElementById("password") as HTMLInputElement;
+    const usernameInput: HTMLInputElement | null = document.getElementById("username") as HTMLInputElement;
   
     const email: string = emailInput.value;
     const password: string = passwordInput.value;

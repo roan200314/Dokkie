@@ -9,9 +9,9 @@ knopUitjeZien.addEventListener("click", laatZien);
 
 async function zetIn(): Promise<void> {
   //een uitje aanmaken
-  const emailInput: HTMLInputElement | null = document.getElementById("email");
-  const uitjeInput: HTMLInputElement | null = document.getElementById("uit");
-  const prijsInput: HTMLInputElement | null = document.getElementById("prijs");
+  const emailInput: HTMLInputElement | null = document.getElementById("email") as HTMLInputElement;
+  const uitjeInput: HTMLInputElement | null = document.getElementById("uit") as HTMLInputElement;
+  const prijsInput: HTMLInputElement | null = document.getElementById("prijs") as HTMLInputElement;
 
   // Form input velden opslaan
     const email: string = emailInput.value;
@@ -38,11 +38,6 @@ async function zetIn(): Promise<void> {
     //data opslaan in de div
     const data: HTMLElement | null = document.getElementById("uitjeTest");
     
-    //knop aanmaken
-    const buttonJoin: HTMLElement | null = document.createElement("button");
-    
-    //knop om te gaan wijzigen
-    const buttonAanpas: HTMLElement | null = document.createElement("button");
     
     // runquery oproepen en data ophalen door een const aan te maken die alles kan pakken
     const resultaat: any[] | undefined = await runQuery("SELECT * FROM event");
@@ -52,6 +47,12 @@ async function zetIn(): Promise<void> {
     if (resultaat && resultaat.length > 0) {
       resultaat.forEach((row: any) => {
         const div: HTMLElement | null = document.createElement("div");
+        div.style.display = "flex";
+        //knop aanmaken
+        const buttonJoin: HTMLElement | null = document.createElement("button");
+        
+        //knop om te gaan wijzigen
+        const buttonAanpas: HTMLElement | null = document.createElement("button");
         
         //paragraaf voor naam 
         const paragraph: HTMLElement | null = document.createElement("p");
@@ -64,6 +65,7 @@ async function zetIn(): Promise<void> {
         //paragraaf voor de prijs
         const paragraph2: HTMLElement | null = document.createElement("p");
         paragraph2.textContent = `Event price: ${row.price}`;
+        paragraph2.style.marginLeft = "10px";
         //text voor de button
         buttonAanpas.textContent = "Wijzig dit uitje!";
         //style aan button
@@ -71,12 +73,12 @@ async function zetIn(): Promise<void> {
         buttonAanpas.style.marginLeft = "15px";
         
         data.appendChild(div);
-        data.appendChild(paragraph);
-        data.appendChild(paragraph2);
-        data.appendChild(buttonJoin);
-        data.appendChild(buttonAanpas);
+        div.appendChild(paragraph);
+        div.appendChild(paragraph2);
+        div.appendChild(buttonJoin);
+        div.appendChild(buttonAanpas);
         
-        
+
         });
 
 
