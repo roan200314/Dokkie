@@ -56,11 +56,11 @@ async function zetIn(): Promise<void> {
         
         //link voor button aanpassen uitje
         const linkAanpas: HTMLAnchorElement = document.createElement("a");
-        linkAanpas.href = "uitjeAanpas.html";
+        linkAanpas.href = "uitjeAanpas.html?id=(?)", ;
 
         //link voor button aanpassen uitje
         const linkJoin: HTMLAnchorElement = document.createElement("a");
-        linkJoin.href = "uitjeJoin.html";
+        linkJoin.href = "uitjeJoin.html?";
 
 
         //paragraaf voor naam 
@@ -81,12 +81,14 @@ async function zetIn(): Promise<void> {
         buttonAanpas.style.backgroundColor = "#2eb807";
         buttonAanpas.style.marginLeft = "15px";
         
-        linkAanpas.appendChild(buttonJoin);
+        linkAanpas.appendChild(buttonAanpas);
+        linkJoin.appendChild(buttonJoin);
+
         
         div.appendChild(paragraph);
         div.appendChild(paragraph2);
         div.appendChild(linkAanpas);
-        div.appendChild(buttonAanpas);
+        div.appendChild(linkJoin);
         data.appendChild(div);
         
 
