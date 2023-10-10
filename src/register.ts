@@ -1,7 +1,7 @@
 import { runQuery } from "./utils/queryutil";
 
-const registeer:HTMLButtonElement = document.getElementById("button_registreer") as HTMLButtonElement; 
-registeer.addEventListener("click", zetIn);
+const registreer:HTMLButtonElement = document.getElementById("button_registreer") as HTMLButtonElement; 
+registreer.addEventListener("click", zetIn);
 
 async function zetIn(): Promise<void> {
 

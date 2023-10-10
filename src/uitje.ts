@@ -42,7 +42,7 @@ async function zetIn(): Promise<void> {
     // runquery oproepen en data ophalen door een const aan te maken die alles kan pakken
     const resultaat: any[] | undefined = await runQuery("SELECT * FROM event");
     
-
+    
     // data uit de database halen met een for statement 
     if (resultaat && resultaat.length > 0) {
       resultaat.forEach((row: any) => {
@@ -54,6 +54,15 @@ async function zetIn(): Promise<void> {
         //knop om te gaan wijzigen
         const buttonAanpas: HTMLElement | null = document.createElement("button");
         
+        //link voor button aanpassen uitje
+        const linkAanpas: HTMLAnchorElement = document.createElement("a");
+        linkAanpas.href = "uitjeAanpas.html";
+
+        //link voor button aanpassen uitje
+        const linkJoin: HTMLAnchorElement = document.createElement("a");
+        linkJoin.href = "uitjeJoin.html";
+
+
         //paragraaf voor naam 
         const paragraph: HTMLElement | null = document.createElement("p");
         paragraph.textContent = `Event Description: ${row.description}`;
@@ -72,11 +81,13 @@ async function zetIn(): Promise<void> {
         buttonAanpas.style.backgroundColor = "#2eb807";
         buttonAanpas.style.marginLeft = "15px";
         
-        data.appendChild(div);
+        linkAanpas.appendChild(buttonJoin);
+        
         div.appendChild(paragraph);
         div.appendChild(paragraph2);
-        div.appendChild(buttonJoin);
+        div.appendChild(linkAanpas);
         div.appendChild(buttonAanpas);
+        data.appendChild(div);
         
 
         });

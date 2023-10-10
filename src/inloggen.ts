@@ -12,8 +12,9 @@ async function ophalen(): Promise<void> {
     const email: string = emailInput.value;
     const password: string = passwordInput.value;
 
-    console.log(email, password);
-    // const resultaat: any[] | undefined = await runQuery("SELECT * FROM user WHERE email = " + [email] + " LIMIT 1");
+    console.log("Email:", email);
+    console.log("Password:", password);
+    const resultaat: any = await runQuery("SELECT * FROM user WHERE email = ? AND password = ?", [email, password]);
 
-    // console.log(resultaat);
+    console.log(resultaat);
  }
