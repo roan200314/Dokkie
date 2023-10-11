@@ -56,16 +56,16 @@ async function zetIn(): Promise<void> {
         
         //link voor button aanpassen uitje
         const linkAanpas: HTMLAnchorElement = document.createElement("a");
-        linkAanpas.href = "uitjeAanpas.html?id=(?)", ;
+        linkAanpas.href = `uitjeAanpas.html?id=${row.eventId}`;
 
         //link voor button aanpassen uitje
         const linkJoin: HTMLAnchorElement = document.createElement("a");
-        linkJoin.href = "uitjeJoin.html?";
+        linkJoin.href = `uitjeJoin.html?id=${row.eventId}`;
 
 
         //paragraaf voor naam 
         const paragraph: HTMLElement | null = document.createElement("p");
-        paragraph.textContent = `Event Description: ${row.description}`;
+        paragraph.textContent = `Soort Uitje: ${row.description}`;
         //text voor de button
         buttonJoin.textContent = "Join dit uitje!";
         //style aan button
@@ -73,7 +73,7 @@ async function zetIn(): Promise<void> {
         
         //paragraaf voor de prijs
         const paragraph2: HTMLElement | null = document.createElement("p");
-        paragraph2.textContent = `Event price: ${row.price}`;
+        paragraph2.textContent = `Prijs Uitje: ${row.price}`;
         paragraph2.style.marginLeft = "10px";
         //text voor de button
         buttonAanpas.textContent = "Wijzig dit uitje!";
@@ -81,8 +81,8 @@ async function zetIn(): Promise<void> {
         buttonAanpas.style.backgroundColor = "#2eb807";
         buttonAanpas.style.marginLeft = "15px";
         
-        linkAanpas.appendChild(buttonAanpas);
         linkJoin.appendChild(buttonJoin);
+        linkAanpas.appendChild(buttonAanpas);
 
         
         div.appendChild(paragraph);
