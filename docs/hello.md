@@ -23,5 +23,5 @@ Ook ben ik begonnen met een pagina maken om een uitje op het scherm te zetten.
 
 
 
-
+als mensen een uitje maken dan voegt die een eigen tabel toe met een injection als 'create table' vervolgens komt daar een kolom in met personen. Als mensen dan op UitjeJoin klikken moeten ze hun naam invullen dan komen die gegevens in de database en kan ik uiteindelijk de prijs verdelen door het aantal personen.
 

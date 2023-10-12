@@ -64,17 +64,17 @@ async function zetIn(): Promise<void> {
 
 
         //paragraaf voor naam 
-        const paragraph: HTMLElement | null = document.createElement("p");
-        paragraph.textContent = `Soort Uitje: ${row.description}`;
+        const paragraaf: HTMLElement | null = document.createElement("p");
+        paragraaf.textContent = `Soort Uitje: ${row.description}`;
         //text voor de button
         buttonJoin.textContent = "Join dit uitje!";
         //style aan button
         buttonJoin.style.backgroundColor = "#5c20a1";
         
         //paragraaf voor de prijs
-        const paragraph2: HTMLElement | null = document.createElement("p");
-        paragraph2.textContent = `Prijs Uitje: ${row.price}`;
-        paragraph2.style.marginLeft = "10px";
+        const paragraaf2: HTMLElement | null = document.createElement("p");
+        paragraaf2.textContent = `Prijs Uitje: ${row.price}`;
+        paragraaf2.style.marginLeft = "10px";
         //text voor de button
         buttonAanpas.textContent = "Wijzig dit uitje!";
         //style aan button
@@ -85,8 +85,8 @@ async function zetIn(): Promise<void> {
         linkAanpas.appendChild(buttonAanpas);
 
         
-        div.appendChild(paragraph);
-        div.appendChild(paragraph2);
+        div.appendChild(paragraaf);
+        div.appendChild(paragraaf2);
         div.appendChild(linkAanpas);
         div.appendChild(linkJoin);
         data.appendChild(div);
