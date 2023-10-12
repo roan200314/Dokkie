@@ -62,7 +62,7 @@ color: #5c20a1;
 
 .grid-container .info {
     display: grid;
-    grid-row-start: 2;
+    grid-row-start: 1;
     grid-row-end: 9;
     grid-column-start: 1;
     grid-column-end: 13;

@@ -29,7 +29,5 @@ async function laatZien(): Promise<void> {
    data.appendChild(paragraaf);
     });
 }
-
-
 }
 laatZien();
