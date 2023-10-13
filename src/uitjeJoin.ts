@@ -9,6 +9,17 @@ const IdOphalen: URL= new URL(currentURL);
 //gelijk zetten aan de searchparams.
 const id: string | null = IdOphalen.searchParams.get("id");
 
+// runquery oproepen en data ophalen door een const aan te maken die alles kan pakken
+const resultaat: any[] | undefined = await runQuery("SELECT * FROM event WHERE eventId = (?)", [id]);
+
+ //alle gebruikers laten zien voor dropdown
+const resultaat2: any[] | undefined = await runQuery("SELECT * FROM user");
+
+
+
+console.log(resultaat);
+console.log(resultaat2);
+
 
 async function laatZien(): Promise<void> {
     
@@ -20,15 +31,6 @@ async function laatZien(): Promise<void> {
 
 
 
-   // runquery oproepen en data ophalen door een const aan te maken die alles kan pakken
-   const resultaat: any[] | undefined = await runQuery("SELECT * FROM event WHERE eventId = (?)", [id]);
-
-    //alle gebruikers laten zien voor dropdown
-   const resultaat2: any[] | undefined = await runQuery("SELECT * FROM user");
-
-
-   console.log(resultaat);
-   console.log(resultaat2);
 
 //uitje op scherm laten zien
    if (resultaat && resultaat.length > 0) {
@@ -47,21 +49,21 @@ async function laatZien(): Promise<void> {
    const paragraaf2: HTMLElement | null = document.createElement("p");
    paragraaf2.textContent = `Prijs van uitje: ${row.price}`;
 
+   //namen ophalen voor label vanuit de database
+   if (resultaat2 && resultaat2.length > 0) {
+       resultaat2.forEach((gebruiker: any) => {
+           const label: HTMLElement | null = document.createElement("option");
+           label.textContent = `${gebruiker.username}`;
+   
+           data2?.appendChild(label);
+       });
+   }
    div.appendChild(paragraaf);
    div.appendChild(paragraaf2);
    data.appendChild(div);
     });
 }
 
-//namen ophalen voor label vanuit de database
-if (resultaat2 && resultaat2.length > 0) {
-    resultaat2.forEach((gebruiker: any) => {
-        const label: HTMLElement | null = document.createElement("option");
-        label.textContent = `${gebruiker.username}`;
-
-        data2?.appendChild(label);
-    });
-}
 }
 
 //functie om naam in database te zetten aan uitje
@@ -71,9 +73,9 @@ async function zetIn(): Promise<void> {
     const naam: string = naaminput.value;
 
     console.log(naam);
-
-    //inserten in database
-    await runQuery("INSERT INTO participant (eventId, name, userId) VALUES (?)", [id, naam]);  
+       
+            //inserten in database
+         await runQuery("INSERT INTO participant (eventId, name, userId) VALUES (?)", [id, naam, userid]);  
 
 }
 
