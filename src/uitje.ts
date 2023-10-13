@@ -17,7 +17,7 @@ async function zetIn(): Promise<void> {
     const email: string = emailInput.value;
     const uitje: string = uitjeInput.value;
     const prijs: string = prijsInput.value;
-    if (emailInput && uitjeInput && prijsInput {
+    if (emailInput && uitjeInput && prijsInput) {
   
       // data in console zetten om te checken
       console.log("Email:", email);

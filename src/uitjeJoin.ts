@@ -23,10 +23,22 @@ async function laatZien(): Promise<void> {
    if (resultaat && resultaat.length > 0) {
     resultaat.forEach((row: any) => {
 
+        //div maken voor de data
+    const div: HTMLElement | null = document.createElement("div");
+    div.style.display = "flex";
+
+    //paragraaf voor naam van uitje
    const paragraaf: HTMLElement | null = document.createElement("p");
    paragraaf.textContent = `Naam van uitje: ${row.description}`;
+   paragraaf.style.marginRight = "15px";
 
-   data.appendChild(paragraaf);
+   //paragraaf voor prijs van uitje
+   const paragraaf2: HTMLElement | null = document.createElement("p");
+   paragraaf2.textContent = `Prijs van uitje: ${row.price}`;
+
+   div.appendChild(paragraaf);
+   div.appendChild(paragraaf2);
+   data.appendChild(div);
     });
 }
 }
