@@ -5,6 +5,9 @@ async function laatZien(): Promise<void> {
     
    //data opslaan in de div
    const data: HTMLElement | null = document.getElementById("uitje");
+
+   const data2: HTMLElement | null = document.getElementById("namen");
+
     
     //de id ophalen uit de url
     const currentURL: string = window.location.href;
@@ -15,11 +18,18 @@ async function laatZien(): Promise<void> {
 
 
 
+
    // runquery oproepen en data ophalen door een const aan te maken die alles kan pakken
    const resultaat: any[] | undefined = await runQuery("SELECT * FROM event WHERE eventId = (?)", [id]);
 
-   console.log(resultaat);
+    //alle gebruikers laten zien voor dropdown
+   const resultaat2: any[] | undefined = await runQuery("SELECT * FROM user");
 
+
+   console.log(resultaat);
+   console.log(resultaat2);
+
+//uitje op scherm laten zien
    if (resultaat && resultaat.length > 0) {
     resultaat.forEach((row: any) => {
 
@@ -41,5 +51,16 @@ async function laatZien(): Promise<void> {
    data.appendChild(div);
     });
 }
+
+//namen ophalen voor label vanuit de database
+if (resultaat2 && resultaat2.length > 0) {
+    resultaat2.forEach((gebruiker: any) => {
+        const label: HTMLElement | null = document.createElement("option");
+        label.textContent = `${gebruiker.username}`;
+
+        data2?.appendChild(label);
+    });
+}
 }
 laatZien();
+
