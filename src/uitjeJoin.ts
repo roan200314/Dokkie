@@ -1,20 +1,21 @@
 import { runQuery } from "./utils/queryutil";
-   
+const knopGebruiker:HTMLButtonElement = document.getElementById("submit") as HTMLButtonElement; 
+knopGebruiker.addEventListener("click", zetIn);
+
+//de id ophalen uit de url
+const currentURL: string = window.location.href;
+//opslaan in een string
+const IdOphalen: URL= new URL(currentURL);
+//gelijk zetten aan de searchparams.
+const id: string | null = IdOphalen.searchParams.get("id");
+
 
 async function laatZien(): Promise<void> {
     
-   //data opslaan in de div
+   //data opslaan in de div 
    const data: HTMLElement | null = document.getElementById("uitje");
 
    const data2: HTMLElement | null = document.getElementById("namen");
-
-    
-    //de id ophalen uit de url
-    const currentURL: string = window.location.href;
-    //opslaan in een string
-    const IdOphalen: URL= new URL(currentURL);
-    //gelijk zetten aan de searchparams.
-    const id: string | null = IdOphalen.searchParams.get("id");
 
 
 
@@ -62,5 +63,20 @@ if (resultaat2 && resultaat2.length > 0) {
     });
 }
 }
+
+//functie om naam in database te zetten aan uitje
+async function zetIn(): Promise<void> {
+    const naaminput: HTMLInputElement | null = document.getElementById("namen") as HTMLInputElement;
+
+    const naam: string = naaminput.value;
+
+    console.log(naam);
+
+    //inserten in database
+    await runQuery("INSERT INTO participant (eventId, name, userId) VALUES (?)", [id, naam]);  
+
+}
+
+
 laatZien();
 

@@ -23,3 +23,12 @@ body {
     box-shadow: 5px 10px #888888;
 }
 
+.knopsturen {
+    margin-right: 15px;
+    margin-top: 15px;
+    position: absolute;
+    right: 330px;
+    bottom: 555px;
+    font-size: 16px;
+    box-shadow: 1px 4px ;
+}
