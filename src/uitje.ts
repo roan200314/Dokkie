@@ -9,20 +9,18 @@ knopUitjeZien.addEventListener("click", laatZien);
 
 async function zetIn(): Promise<void> {
   //een uitje aanmaken
-  const emailInput: HTMLInputElement | null = document.getElementById("email") as HTMLInputElement;
   const uitjeInput: HTMLInputElement | null = document.getElementById("uit") as HTMLInputElement;
   const prijsInput: HTMLInputElement | null = document.getElementById("prijs") as HTMLInputElement;
 
   // Form input velden opslaan
-    const email: string = emailInput.value;
     const uitje: string = uitjeInput.value;
     const prijs: string = prijsInput.value;
-    if (emailInput && uitjeInput && prijsInput) {
+    if (uitjeInput && prijsInput) {
   
-      // data in console zetten om te checken
-      console.log("Email:", email);
-      console.log("Uitje:", uitje);
-      console.log("Prijs:", prijs);
+      // // data in console zetten om te checken
+      // console.log("Email:", email);
+      // console.log("Uitje:", uitje);
+      // console.log("Prijs:", prijs);
     } else {
       console.error("One or more input fields not found");
     }
@@ -56,7 +54,7 @@ async function zetIn(): Promise<void> {
         
         //link voor button aanpassen uitje
         const linkAanpas: HTMLAnchorElement = document.createElement("a");
-        linkAanpas.href = `uitjeAanpas.html?id=${row.eventId}`;
+        linkAanpas.href = `uitjeBewerk.html?id=${row.eventId}`;
 
         //link voor button aanpassen uitje
         const linkJoin: HTMLAnchorElement = document.createElement("a");
