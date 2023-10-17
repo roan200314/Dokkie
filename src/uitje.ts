@@ -16,11 +16,7 @@ async function zetIn(): Promise<void> {
     const uitje: string = uitjeInput.value;
     const prijs: string = prijsInput.value;
     if (uitjeInput && prijsInput) {
-  
-      // // data in console zetten om te checken
-      // console.log("Email:", email);
-      // console.log("Uitje:", uitje);
-      // console.log("Prijs:", prijs);
+ 
     } else {
       console.error("One or more input fields not found");
     }
@@ -87,7 +83,7 @@ async function zetIn(): Promise<void> {
         div.appendChild(paragraaf2);
         div.appendChild(linkAanpas);
         div.appendChild(linkJoin);
-        data.appendChild(div);
+        data?.appendChild(div);
         
 
         });

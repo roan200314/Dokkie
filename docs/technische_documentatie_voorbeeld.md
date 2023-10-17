@@ -15,6 +15,7 @@ Ik heb toen de typscript documenten aangemaakt om te gaan beginnen met logica. D
 
 Ik had toen een 'utils' mapje aangemaakt waarin ik een queryutil.ts heb toegevoegd. Met dit als code:
 
+////////////////////////////////CONNECTIE DATABASE/////////////////////////////
 <code>
 import { api } from "@hboictcloud/api";
 import "../hboictcloud-config";
@@ -34,6 +35,8 @@ Met deze code heb ik een manier gemaakt waarin ik alleen de code hoef aan te roe
 
 Vervolgens heb ik deze code gebruikt:
 
+
+/////////////////////////////////////////////UITJE IN DATABASE ZETTEN/////////////////////////////////////////////////
 <code>
 import { runQuery } from "./utils/queryutil";
 
@@ -46,18 +49,15 @@ knopUitjeZien.addEventListener("click", laatZien);
 
 async function zetIn(): Promise<void> {
   //een uitje aanmaken
-  const emailInput: HTMLInputElement | null = document.getElementById("email");
   const uitjeInput: HTMLInputElement | null = document.getElementById("uit");
   const prijsInput: HTMLInputElement | null = document.getElementById("prijs");
 
   // Form input velden opslaan
-    const email: string = emailInput.value;
     const uitje: string = uitjeInput.value;
     const prijs: string = prijsInput.value;
-    if (emailInput && uitjeInput && prijsInput) {
+    if (uitjeInput && prijsInput) {
   
       // data in console zetten om te checken
-      console.log("Email:", email);
       console.log("Uitje:", uitje);
       console.log("Prijs:", prijs);
     } else {
@@ -69,4 +69,8 @@ async function zetIn(): Promise<void> {
   }
 </code>
 
-Om een uitje in mijn database te zetten. 
+Om een uitje in mijn database te zetten. Dit heb ik gedaan coor een knop aan te maken die hij dan ophaald met de ID van de knop in de HTML. Vervolgens zit er dan een event op "click", met de naam zetIn(). 
+
+Vervolgens is er een functie zetIn(); hierin heb ik de inputs gedefinieerd en een constante eraan vast gezet. vervolgens heb ik de query: await runQuery("INSERT INTO event (description, price) VALUES (?)", [uitje, prijs]);  
+
+Met deze query inject hij de bovenstaande data in de database.

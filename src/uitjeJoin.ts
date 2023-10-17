@@ -17,10 +17,6 @@ const resultaat2: any[] | undefined = await runQuery("SELECT * FROM user");
 
 
 
-console.log(resultaat);
-console.log(resultaat2);
-
-
 async function laatZien(): Promise<void> {
     
    //data opslaan in de div 
@@ -60,7 +56,7 @@ async function laatZien(): Promise<void> {
    }
    div.appendChild(paragraaf);
    div.appendChild(paragraaf2);
-   data.appendChild(div);
+   data?.appendChild(div);
     });
 }
 
@@ -75,7 +71,7 @@ async function zetIn(): Promise<void> {
     console.log(naam);
        
             //inserten in database
-         await runQuery("INSERT INTO participant (eventId, name, userId) VALUES (?)", [id, naam, userid]);  
+         await runQuery("INSERT INTO participant (eventId, name) VALUES (?)", [id, naam]);  
 
 }
 

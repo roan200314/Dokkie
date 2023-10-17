@@ -12,6 +12,7 @@ body {
 
 .uitje {
     width: 60%;
+    height: 500px;
     margin-left: 20%;
     padding-bottom: 15px;
     margin-top: 15px;
@@ -21,4 +22,9 @@ body {
     flex-direction: column;
     align-items: center;
     box-shadow: 5px 10px #888888;
+}
+
+.textBewerk {
+    position: absolute;
+    left: 350px;
 }
