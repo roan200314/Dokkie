@@ -50,17 +50,27 @@ async function laatZien(): Promise<void> {
             //div maken voor de data
             const div: HTMLElement | null = document.createElement("div");
             div.style.display = "flex";
-
+            div.style.marginTop = "25px";
             //paragraaf voor namen van het uitje
-            const paragraaf: HTMLElement | null = document.createElement("p");
-            const paragraaf3: HTMLElement | null = document.createElement("p");
-            paragraaf.textContent = "Mensen bij het uitje: ";
-            paragraaf3.style.marginRight = "15px";
-            paragraaf3.style.bottom = "479px";
-            paragraaf3.textContent = `  ${row.name}`;
+            const personenText: HTMLElement | null = document.createElement("p");
+            const persoonNaam: HTMLElement | null = document.createElement("p");
+            const pVoorBedrag: HTMLElement | null = document.createElement("p");
+            const form1: HTMLElement | null = document.createElement("input");
+            form1.type = "number";
+            form1.min = "0";
+            form1.style.width = "55px";
+            form1.style.height = "35px";
+            form1.style.marginTop = "10px";
+            personenText.textContent = "Persoon bij het uitje: ";
+            pVoorBedrag.textContent = "Heeft betaald:";
+            persoonNaam.style.marginRight = "15px";
+            persoonNaam.style.bottom = "479px";
+            persoonNaam.textContent = `${row.name}`;
 
-            div.appendChild(paragraaf);
-            div.appendChild(paragraaf3);
+            div.appendChild(personenText);
+            div.appendChild(persoonNaam);
+            div.appendChild(pVoorBedrag);
+            div.appendChild(form1);
             data?.appendChild(div);
         });
     }
@@ -72,6 +82,9 @@ async function bereken(): Promise<void> {
     div.style.display = "flex";
     const paragraaf: HTMLElement | null = document.createElement("p");
     paragraaf.textContent = "iedereen moet €" + prijsPerDeelnemer.toFixed(2) + " betalen";
+    
+
+    // if (prijsPerDeelnemer ==)
 
     div.appendChild(paragraaf);
     data?.appendChild(div);
