@@ -13,13 +13,10 @@ async function zetIn(): Promise<void> {
     const email: string = emailInput.value;
     const password: string = passwordInput.value;
     const username: string = usernameInput.value;
-    if (emailInput && passwordInput && usernameInput) {
-        // de form in console log zetten om te checken of het werkt
-        console.log("Email:", email);
-        console.log("password:", password);
-        console.log("username:", username);
+    if (!email.trim || !password.trim || !username.trim) {
+      alert("Een of meerdere gegevens niet ingevuld.");
     } else {
-        console.error("One or more input fields not found");
+        alert("Succesvol registreerd.");
     }
 
     //insert in de database

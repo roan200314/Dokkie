@@ -12,6 +12,8 @@ const participant: any[] | undefined = (await runQuery("SELECT * FROM participan
     id,
 ])) as any;
 
+
+
 const uitjeDB: any = event[0];
 const participantDB: any = participant[0];
 const prijsUitje: number = uitjeDB.price;

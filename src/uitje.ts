@@ -14,9 +14,10 @@ async function zetIn(): Promise<void> {
     // Form input velden opslaan
     const uitje: string = uitjeInput.value;
     const prijs: string = prijsInput.value;
-    if (uitjeInput && prijsInput) {
-    } else {
+    if (!uitje.trim() || !prijs.trim()) {
         alert("Een of meerdere gegevens niet ingevuld.");
+    } else {
+        alert("Uitje succesvol toegevoegd.");
     }
 
     //inserten in database

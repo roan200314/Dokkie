@@ -15,11 +15,21 @@ const resultaat: any[] | undefined = await runQuery("SELECT * FROM event WHERE e
 //alle gebruikers laten zien voor dropdown
 const resultaat2: any[] | undefined = await runQuery("SELECT * FROM user");
 
+const link: any = resultaat[0];
+
 async function laatZien(): Promise<void> {
     //data opslaan in de div
     const data: HTMLElement | null = document.getElementById("uitje");
 
     const data2: HTMLElement | null = document.getElementById("namen");
+
+    //naar wijzig uitje gaan
+    const linkAanpas: HTMLAnchorElement = document.createElement("a");
+    linkAanpas.textContent = "Wijzig uitje";
+    linkAanpas.href = `uitjebewerk.html?id=${link.eventId}`;
+
+    const paragraaf: HTMLElement | null = document.createElement("p");
+    paragraaf.textContent = `Soort Uitje: ${link.description}`;
 
     //uitje op scherm laten zien
     if (resultaat && resultaat.length > 0) {
@@ -46,6 +56,7 @@ async function laatZien(): Promise<void> {
                     data2?.appendChild(label);
                 });
             }
+            div.appendChild(linkAanpas);
             div.appendChild(paragraaf);
             div.appendChild(paragraaf2);
             data?.appendChild(div);
