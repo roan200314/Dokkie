@@ -28,3 +28,44 @@ body {
     position: absolute;
     left: 350px;
 }
+
+.prijsNaam {
+    display: flex;
+}
+
+#uitjeNaam {
+    margin-right: 15px;
+    position: absolute;
+    left: 350px;
+    bottom: 479px;
+}
+
+#prijsUitje {
+    position: absolute;
+    left: 350px;
+    bottom: 436px;
+}
+
+#persoonNaam {
+    margin-right: 15px;
+    bottom: 479px;
+}
+
+div input {
+    width: 55px;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+div button {
+    margin-left: 15px;
+    font-size: 16px;
+    box-shadow: 1px 4px ;
+}
+
+div #betaling {
+    font-size: 12px;
+    width: 70px;
+    height: 50px;
+}

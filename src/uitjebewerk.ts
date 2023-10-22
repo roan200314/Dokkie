@@ -12,8 +12,6 @@ const participant: any[] | undefined = (await runQuery("SELECT * FROM participan
     id,
 ])) as any;
 
-
-
 const uitjeDB: any = event[0];
 const participantDB: any = participant[0];
 const prijsUitje: number = uitjeDB.price;
@@ -25,23 +23,17 @@ const data: HTMLElement | null = document.getElementById("uitje");
 async function laatZien(): Promise<void> {
     //div maken voor de data
     const div: HTMLElement | null = document.createElement("div");
-    div.style.display = "flex";
+    div.className = "prijsNaam";
 
     //paragraaf voor naam van uitje
     const paragraaf: HTMLElement | null = document.createElement("p");
+    paragraaf.id = "uitjeNaam";
     //uitje op scherm laten zien
     paragraaf.textContent = `Naam van uitje: ${uitjeDB.description}`;
-    paragraaf.style.marginRight = "15px";
-    paragraaf.style.position = "absolute";
-    paragraaf.style.left = "350px";
-    paragraaf.style.bottom = "479px";
-
     //paragraaf voor prijs van uitje
     const paragraaf2: HTMLElement | null = document.createElement("p");
+    paragraaf2.id = "prijsUitje";
     paragraaf2.textContent = `Prijs van uitje: ${uitjeDB.price}`;
-    paragraaf2.style.position = "absolute";
-    paragraaf2.style.left = "350px";
-    paragraaf.style.bottom = "408px";
 
     div.appendChild(paragraaf);
     div.appendChild(paragraaf2);
@@ -58,21 +50,22 @@ async function laatZien(): Promise<void> {
             const persoonNaam: HTMLElement | null = document.createElement("p");
             const pVoorBedrag: HTMLElement | null = document.createElement("p");
             const form1: HTMLElement | null = document.createElement("input");
+            const prijsVoegen: HTMLElement | null = document.createElement("button");
+            prijsVoegen.id = "betaling";
+            //form nummer kan niet lager dan 0
             form1.type = "number";
             form1.min = "0";
-            form1.style.width = "55px";
-            form1.style.height = "35px";
-            form1.style.marginTop = "10px";
+            prijsVoegen.textContent = "Voeg betaling toe";
             personenText.textContent = "Persoon bij het uitje: ";
             pVoorBedrag.textContent = "Heeft betaald:";
-            persoonNaam.style.marginRight = "15px";
-            persoonNaam.style.bottom = "479px";
+            persoonNaam.id = "persoonNaam";
             persoonNaam.textContent = `${row.name}`;
 
             div.appendChild(personenText);
             div.appendChild(persoonNaam);
             div.appendChild(pVoorBedrag);
             div.appendChild(form1);
+            div.appendChild(prijsVoegen);
             data?.appendChild(div);
         });
     }
@@ -81,10 +74,9 @@ async function bereken(): Promise<void> {
     prijsPerDeelnemer;
     //div maken voor de data
     const div: HTMLElement | null = document.createElement("div");
-    div.style.display = "flex";
+    div.className = "prijsNaam";
     const paragraaf: HTMLElement | null = document.createElement("p");
-    paragraaf.textContent = "iedereen moet €" + prijsPerDeelnemer.toFixed(2) + " betalen";
-    
+    paragraaf.textContent = "Iedereen moet €" + prijsPerDeelnemer.toFixed(2) + " betalen";
 
     // if (prijsPerDeelnemer ==)
 

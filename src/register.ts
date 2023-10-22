@@ -13,7 +13,8 @@ async function zetIn(): Promise<void> {
     const email: string = emailInput.value;
     const password: string = passwordInput.value;
     const username: string = usernameInput.value;
-    if (!email.trim || !password.trim || !username.trim) {
+    //met trim kijkt die of de string leeg is 
+    if (!email.trim() || !password.trim() || !username.trim()) {
       alert("Een of meerdere gegevens niet ingevuld.");
     } else {
         alert("Succesvol registreerd.");

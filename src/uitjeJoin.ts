@@ -74,6 +74,7 @@ async function zetIn(): Promise<void> {
 
     //inserten in database
     await runQuery("INSERT INTO participant (eventId, name) VALUES (?)", [id, naam]);
+    alert(naam + " is succesvol toegevoegd aan het uitje.");
 }
 
 laatZien();

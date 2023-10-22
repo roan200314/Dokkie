@@ -28,6 +28,7 @@ body {
     box-shadow: 1px 4px ;
 }
 
-/* #uitjeTest {
-    background-color: red;
-} */
+#uitjeZien {
+    display: flex;
+    align-items: center;
+}
