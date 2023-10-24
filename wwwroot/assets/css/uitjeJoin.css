@@ -66,4 +66,10 @@ body {
     .knopsturen {
         font-size: 19px;
     }
+
+    #wijzig {
+        position: relative;
+        top: -60px;
+        left: 35px;
+    }
 }

@@ -25,6 +25,7 @@ async function laatZien(): Promise<void> {
 
     //naar wijzig uitje gaan
     const linkAanpas: HTMLAnchorElement = document.createElement("a");
+    linkAanpas.id = "wijzig";
     linkAanpas.textContent = "Wijzig uitje";
     linkAanpas.href = `uitjebewerk.html?id=${link.eventId}`;
 
