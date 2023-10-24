@@ -43,13 +43,16 @@ async function laatZien(): Promise<void> {
         participant.forEach((row: any) => {
             //div maken voor de data
             const div: HTMLElement | null = document.createElement("div");
-            div.style.display = "flex";
-            div.style.marginTop = "25px";
+            div.className = "bewerkDiv";
             //paragraaf voor namen van het uitje
             const personenText: HTMLElement | null = document.createElement("p");
+            personenText.id = "personenText";
             const persoonNaam: HTMLElement | null = document.createElement("p");
+            persoonNaam.id = "persoonNaam";
             const pVoorBedrag: HTMLElement | null = document.createElement("p");
+            pVoorBedrag.id = "pVoorBedrag";
             const form1: HTMLElement | null = document.createElement("input");
+            form1.id = "form1";
             const prijsVoegen: HTMLElement | null = document.createElement("button");
             prijsVoegen.id = "betaling";
             //form nummer kan niet lager dan 0
@@ -68,6 +71,10 @@ async function laatZien(): Promise<void> {
             div.appendChild(prijsVoegen);
             data?.appendChild(div);
         });
+    } else {
+        const paragraaf: HTMLElement | null = document.createElement("p");
+        paragraaf.textContent = "Voeg deelnemers toe aan dit uitje.";
+        div.appendChild(paragraaf);
     }
 }
 async function bereken(): Promise<void> {

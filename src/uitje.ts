@@ -1,6 +1,6 @@
 import { runQuery } from "./utils/queryutil";
 
-const knopUitjeAanmake: HTMLButtonElement = document.getElementById("buttton_uitje") as HTMLButtonElement;
+const knopUitjeAanmake: HTMLButtonElement = document.getElementById("button_uitje") as HTMLButtonElement;
 knopUitjeAanmake.addEventListener("click", zetIn);
 
 const knopUitjeZien: HTMLButtonElement = document.getElementById("uitjeZien") as HTMLButtonElement;
@@ -35,16 +35,17 @@ async function laatZien(): Promise<void> {
     if (resultaat && resultaat.length > 0) {
         resultaat.forEach((row: any) => {
             const div: HTMLElement | null = document.createElement("div");
-            div.style.display = "flex";
+            div.className = "alleUitjes";
             //knop aanmaken
             const buttonJoin: HTMLElement | null = document.createElement("button");
-
+            buttonJoin.className = "joinUitje";
             //knop om te gaan wijzigen
             const buttonAanpas: HTMLElement | null = document.createElement("button");
-
+            buttonAanpas.className = "bewerkUitje";
             //link voor button aanpassen uitje
             const linkAanpas: HTMLAnchorElement = document.createElement("a");
             linkAanpas.href = `uitjeBewerk.html?id=${row.eventId}`;
+
 
             //link voor button aanpassen uitje
             const linkJoin: HTMLAnchorElement = document.createElement("a");
@@ -52,6 +53,7 @@ async function laatZien(): Promise<void> {
 
             //paragraaf voor naam
             const paragraaf: HTMLElement | null = document.createElement("p");
+            paragraaf.id = "soortUitje";
             paragraaf.textContent = `Soort Uitje: ${row.description}`;
             //text voor de button
             buttonJoin.textContent = "Join dit uitje!";
@@ -60,6 +62,7 @@ async function laatZien(): Promise<void> {
 
             //paragraaf voor de prijs
             const paragraaf2: HTMLElement | null = document.createElement("p");
+            paragraaf2.id = "prijsUitje";
             paragraaf2.textContent = `Prijs Uitje: ${row.price}`;
             paragraaf2.style.marginLeft = "10px";
             //text voor de button

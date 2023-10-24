@@ -1,7 +1,7 @@
 body {
     font-size: 1.2em;
     background-color: #e8e8e8;
-    font-family: 'Anton', sans-serif;
+    font-family: "Anton", sans-serif;
 }
 
 .container {
@@ -23,7 +23,9 @@ body {
     align-items: center;
     box-shadow: 5px 10px #888888;
 }
-
+/* .bewerkDiv {
+    display: flex;
+} */
 .textBewerk {
     position: absolute;
     left: 350px;
@@ -61,11 +63,75 @@ div input {
 div button {
     margin-left: 15px;
     font-size: 16px;
-    box-shadow: 1px 4px ;
+    box-shadow: 1px 4px;
 }
 
 div #betaling {
     font-size: 12px;
-    width: 70px;
+    width: 129px;
     height: 50px;
+}
+
+@media only screen and (max-width: 850px) {
+    .uitje {
+        width: 100%;
+        margin-top: 86px;
+        margin-left: 0%;
+        margin-right: 0%;
+        height: fit-content;
+    }
+
+    .bewerkDiv {
+        border-width: 2px;
+        border-style: solid;
+        border-color: #333;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #uitjeNaam {
+        position: relative;
+        left: -8px;
+        top: 10px;
+        font-size: 18px;
+    }
+
+    #prijsUitje {
+        position: relative;
+        left: -5px;
+        top: 10px;
+        font-size: 18px;
+    }
+
+    #personenText {
+        font-size: 20px;
+        position: relative;
+        top: 10px;
+        left: 10px;
+    }
+
+    #persoonNaam {
+        font-size: 20px;
+        position: relative;
+        top: -19px;
+        left: 10px;
+    }
+
+    #pVoorBedrag {
+        position: relative;
+        top: -39px;
+        left: 10px;
+    }
+
+    #form1 {
+        position: relative;
+        left: 159px;
+        top: -103px;
+    }
+    #betaling {
+        position: relative;
+        left: 111px;
+        top: -43px;
+    }
 }

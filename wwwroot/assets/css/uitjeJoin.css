@@ -40,3 +40,30 @@ body {
     color:#e8e8e8;
     text-decoration: none;
 }
+
+@media only screen and (max-width: 850px) {
+    .uitje {
+        width: 100%;
+        margin-top: 86px;
+        margin-left: 0%;
+        margin-right: 0%;
+        height: 227px;
+    }
+
+    .knopsturen {
+        position: relative;
+        left: 10px;
+        top: 128px;
+    }
+
+    .namen2 {
+        position: relative;
+        left: 10px;
+        top: 23px;
+        font-size: 20px;
+    }
+
+    .knopsturen {
+        font-size: 19px;
+    }
+}

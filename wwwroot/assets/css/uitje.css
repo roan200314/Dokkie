@@ -1,7 +1,7 @@
 body {
     font-size: 1.2em;
     background-color: #e8e8e8;
-    font-family: 'Anton', sans-serif;
+    font-family: "Anton", sans-serif;
 }
 
 .container {
@@ -25,10 +25,80 @@ body {
 
 .buttonuit {
     font-size: 16px;
-    box-shadow: 1px 4px ;
+    box-shadow: 1px 4px;
 }
 
 #uitjeZien {
+    font-size: 16px;
+    box-shadow: 1px 4px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.alleUitjes {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #333;
+    padding: 10px;
+    margin-top: 30px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#soortUitje {
+    margin-left: 10px;
+}
+
+.joinUitje {
+    float: right;
+    width: 101px;
+    height: 36px;
+}
+
+.bewerkUitje {
+    margin-bottom: 15px;
+    float: right;
+    width: 101px;
+    height: 36px;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 850px) {
+    .form {
+        width: 80%;
+        margin-left: 11%;
+        margin-top: 86px;
+    }
+    .buttonuit {
+        margin-top: 30px;
+        height: 23px;
+    }
+
+    #uit {
+        margin-bottom: 30px;
+        height: 23px;
+    }
+
+    #prijs {
+        height: 23px;
+    }
+
+    .inputVeld {
+        margin-right: 13px;
+    }
+
+    .joinUitje {
+        width: 102px;
+        height: 30px;
+    }
+
+    .bewerkUitje {
+        margin-bottom: 30px;
+        height: 30px;
+    }
+
+    #uitjeZien {
+       margin-left: 108px;
+    }
 }
