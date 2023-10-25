@@ -41,11 +41,12 @@ async function laatZien(): Promise<void> {
 
             //paragraaf voor naam van uitje
             const paragraaf: HTMLElement | null = document.createElement("p");
+            paragraaf.id = "uitjeNaam";
             paragraaf.textContent = `Naam van uitje: ${row.description}`;
-            paragraaf.style.marginRight = "15px";
 
             //paragraaf voor prijs van uitje
             const paragraaf2: HTMLElement | null = document.createElement("p");
+            paragraaf2.id = "uitjePrijs";
             paragraaf2.textContent = `Prijs van uitje: ${row.price}`;
 
             //namen ophalen voor label vanuit de database
