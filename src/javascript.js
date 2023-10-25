@@ -6,7 +6,7 @@
 // function app() {
 //     console.log("Hello world from JavaScript!");
 // }
-function myFunction() {
+function navbarResponsive() {
     const x = document.getElementById("mynavbar");
     if (x.className === "navbar") {
         x.className += " responsive";
