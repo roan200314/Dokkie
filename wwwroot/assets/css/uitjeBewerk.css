@@ -23,11 +23,9 @@ body {
     align-items: center;
     box-shadow: 5px 10px #888888;
 }
-/* .bewerkDiv {
-    display: flex;
-} */
+
 .textBewerk {
-    position: absolute;
+    position: relative;
     left: 350px;
 }
 
@@ -35,17 +33,24 @@ body {
     display: flex;
 }
 
+.bewerkDiv {
+    display: flex;
+    margin-top: 15px;
+    width: fit-content;
+    height: fit-content;
+}
+
 #uitjeNaam {
     margin-right: 15px;
-    position: absolute;
-    left: 350px;
-    bottom: 479px;
+    position: relative;
+    left: -243px;
+    top: 10px;
 }
 
 #prijsUitje {
-    position: absolute;
-    left: 350px;
-    bottom: 436px;
+    position: relative;
+    right: 450px;
+    bottom: -59px;
 }
 
 #persoonNaam {
@@ -64,6 +69,10 @@ div button {
     margin-left: 15px;
     font-size: 16px;
     box-shadow: 1px 4px;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 div #betaling {
