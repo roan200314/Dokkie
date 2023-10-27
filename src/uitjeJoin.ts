@@ -15,7 +15,9 @@ const resultaat: any[] | undefined = await runQuery("SELECT * FROM event WHERE e
 //alle gebruikers laten zien voor dropdown
 const resultaat2: any[] | undefined = await runQuery("SELECT * FROM user");
 
+
 const link: any = resultaat[0];
+const user: any = resultaat2[0];
 
 async function laatZien(): Promise<void> {
     //data opslaan in de div
@@ -75,7 +77,7 @@ async function zetIn(): Promise<void> {
     console.log(naam);
 
     //inserten in database
-    await runQuery("INSERT INTO participant (eventId, name) VALUES (?)", [id, naam]);
+    await runQuery("INSERT INTO participant (eventId, name, userId) VALUES (?)", [id, naam, `${user.userId}`]);
     alert(naam + " is succesvol toegevoegd aan het uitje.");
 }
 
