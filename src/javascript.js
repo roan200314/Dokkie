@@ -15,4 +15,11 @@ function navbarResponsive() {
     }
 }
 
+function navbarOnly() {
+    const nav = document.getElementById("mynavbar");
+    const h1 = document.getElementById("onderwerp"); 
+    if (nav.className === "navbar responsive") {
+        h1.style.display = "none";
+    }
+}
 // app();

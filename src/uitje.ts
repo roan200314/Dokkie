@@ -63,7 +63,7 @@ async function laatZien(): Promise<void> {
             //paragraaf voor de prijs
             const paragraaf2: HTMLElement | null = document.createElement("p");
             paragraaf2.id = "prijsUitje";
-            paragraaf2.textContent = `Prijs Uitje: ${row.price}`;
+            paragraaf2.textContent = `Prijs Uitje: €${row.price}`;
             paragraaf2.style.marginLeft = "10px";
             //text voor de button
             buttonAanpas.textContent = "Wijzig dit uitje!";

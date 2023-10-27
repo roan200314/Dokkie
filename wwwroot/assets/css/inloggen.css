@@ -6,6 +6,7 @@ body {
 
 .container {
     width: 60%;
+    height: 200px;
     margin-left: 20%;
     padding-bottom: 15px;
     margin-top: 15px;
@@ -17,12 +18,97 @@ body {
     box-shadow: 5px 10px #888888;
 }
 
-.button {
+#inlog {
+font-size: 22px;
+}
+
+.inputBox {
+    padding-top: 23px;
+}
+#email {
+    position: relative;
+    left: -41px;
+    top: 3px;
+}
+
+#emailInput {
+    position: relative;
+    left: -6px;
+    top: 1px;
+}
+
+#wachtwoord {
+    position: relative;
+    left: -39px;
+    top: 16px;
+}
+
+#wachtwoordInput {
+    position: relative;
+    left: -8px;
+    top: 14px;
+}
+
+.login {
+    position: relative;
+    left: 252px;
+    top: -29px;
     font-size: 16px;
     box-shadow: 1px 4px ;
 }
 
 /* RESPONSIVE */
 @media only screen and (max-width: 850px) {
-    
+
+    .container {
+        width: 100%;
+        height: 250px;
+        margin-left: 0%;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        padding-top: 0px;
+        background-color: #5c20a1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 5px 10px #888888;
+    }
+    #inlog {
+        font-size: 22px;
+        }
+        
+        .inputBox {
+            padding-top: 23px;
+        }
+        #email {
+            position: relative;
+            left: -41px;
+            top: 3px;
+        }
+        
+        #emailInput {
+            position: relative;
+            left: -6px;
+            top: 1px;
+        }
+        
+        #wachtwoord {
+            position: relative;
+            left: -39px;
+            top: 16px;
+        }
+        
+        #wachtwoordInput {
+            position: relative;
+            left: -8px;
+            top: 14px;
+        }
+        
+        .login {
+            position: relative;
+            left: 10px;
+            top: 41px;
+            font-size: 20px;
+            box-shadow: 1px 4px;
+        }
 }

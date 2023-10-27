@@ -33,7 +33,7 @@ async function laatZien(): Promise<void> {
     //paragraaf voor prijs van uitje
     const paragraaf2: HTMLElement | null = document.createElement("p");
     paragraaf2.id = "prijsUitje";
-    paragraaf2.textContent = `Prijs van uitje: ${uitjeDB.price}`;
+    paragraaf2.textContent = `Prijs van uitje: €${uitjeDB.price}`;
 
     div.appendChild(paragraaf);
     div.appendChild(paragraaf2);

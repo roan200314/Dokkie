@@ -16,18 +16,58 @@ body {
     align-items: center;
     box-shadow: 5px 10px #888888;
 }
+#regi {
+    font-size: 28px;
+}
 
 #button_registreer {
-    font-size: 16px;
+    font-size: 20px;
     box-shadow: 1px 4px;
+    margin-top: 33px;
 }
 
 #button_registreer:hover {
     cursor: pointer;
+    background-color: #e8e8e8;
+    font-weight: bold;
 }
 
+#emailSpan {
+    position: relative;
+    left: -26px;
+    top: 5px;
+}
+
+#wachtwoordSpan {
+    position: relative;
+    left: 0px;
+    top: 4px;
+}
+
+#userSpan {
+    position: relative;
+    left: 15px;
+    top: 5px;
+}
+
+#email {
+    position: relative;
+    left: 97px;
+    top: 3px;
+}
+
+#password {
+    position: relative;
+    left: 70px;
+    top: 3px;
+}
+
+#username{
+    position: relative;
+    left: 55px;
+    top: 3px;
+}
 
 /* RESPONSIVE */
 @media only screen and (max-width: 850px) {
-    
 }

@@ -64,11 +64,19 @@ body {
     height: 36px;
 }
 
+.joinUitje:hover {
+    cursor: pointer;
+}
+
 .bewerkUitje {
     margin-bottom: 15px;
     float: right;
     width: 101px;
     height: 36px;
+}
+
+.bewerkUitje:hover {
+    cursor: pointer;
 }
 
 /* RESPONSIVE */
