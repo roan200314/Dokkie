@@ -74,7 +74,6 @@ async function zetIn(): Promise<void> {
 
     const naam: string = naaminput.value;
 
-    console.log(naam);
 
     //inserten in database
     await runQuery("INSERT INTO participant (eventId, name, userId) VALUES (?)", [id, naam, `${user.userId}`]);

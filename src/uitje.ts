@@ -81,7 +81,6 @@ async function laatZien(): Promise<void> {
             data?.appendChild(div);
         });
 
-        console.log(resultaat);
     } else {
         // Display a message when no data is found
         data.textContent = "Geen data gevonden";
