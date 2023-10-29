@@ -1,6 +1,8 @@
 import { runQuery } from "./utils/queryutil";
 const knopPrijs: HTMLButtonElement = document.getElementById("prijs") as HTMLButtonElement;
 knopPrijs.addEventListener("click", bereken);
+const betalen: HTMLButtonElement = document.getElementById("bewerk") as HTMLButtonElement;
+betalen.addEventListener("click", bewerken);
 
 const currentURL: string = window.location.href;
 const IdOphalen: URL = new URL(currentURL);
@@ -26,14 +28,16 @@ async function laatZien(): Promise<void> {
     div.className = "prijsNaam";
 
     //paragraaf voor naam van uitje
-    const paragraaf: HTMLElement | null = document.createElement("p");
+    const paragraaf: HTMLElement | null = document.createElement("input");
     paragraaf.id = "uitjeNaam";
     //uitje op scherm laten zien
-    paragraaf.textContent = `Naam van uitje: ${uitjeDB.description}`;
+    paragraaf.value = `Naam van uitje: ${uitjeDB.description}`;
+    paragraaf.disabled = true;
     //paragraaf voor prijs van uitje
-    const paragraaf2: HTMLElement | null = document.createElement("p");
+    const paragraaf2: HTMLElement | null = document.createElement("input");
     paragraaf2.id = "prijsUitje";
-    paragraaf2.textContent = `Prijs van uitje: €${uitjeDB.price}`;
+    paragraaf2.disabled = true;
+    paragraaf2.value = `Prijs van uitje: €${uitjeDB.price}`;
 
     div.appendChild(paragraaf);
     div.appendChild(paragraaf2);
@@ -53,6 +57,7 @@ async function laatZien(): Promise<void> {
             pVoorBedrag.id = "pVoorBedrag";
             const form1: HTMLElement | null = document.createElement("input");
             form1.id = "form1";
+
             const prijsVoegen: HTMLElement | null = document.createElement("button");
             prijsVoegen.id = "betaling";
             //form nummer kan niet lager dan 0
@@ -73,7 +78,9 @@ async function laatZien(): Promise<void> {
         });
     } else {
         const paragraaf: HTMLElement | null = document.createElement("p");
+        paragraaf.id = "voegDeelnemer";
         paragraaf.textContent = "Voeg deelnemers toe aan dit uitje.";
+
         div.appendChild(paragraaf);
     }
 }
@@ -90,4 +97,26 @@ async function bereken(): Promise<void> {
     div.appendChild(paragraaf);
     data?.appendChild(div);
 }
+
+async function bewerken(): Promise<void> {
+    const invoer: HTMLInputElement | null = document.getElementById("form1") as HTMLInputElement;
+    const betaald: any = invoer.value;
+
+    const currentDate: date = new Date().toISOString().slice(0, 19).replace("T", " ");
+
+    console.log(betaald);
+
+    const aantalMensen: any = participant?.length;
+
+    for (let i: any = 1; i <= aantalMensen; i++) {
+        await runQuery("INSERT INTO payment (datePaid, description, amount, eventId, name) VALUES (?)", [
+            currentDate,
+            `${uitjeDB.description}`,
+            betaald,
+            id,
+            `${participantDB.name}`,
+        ]);
+    }
+}
+
 laatZien();

@@ -64,20 +64,26 @@ body {
     position: relative;
     right: 265px;
     top: 30px;
+    width: fit-content;
+    height: fit-content;
 }
 
 #uitjePrijs {
     position: relative;
-    right: 429px;
+    right: 448px;
     top: 75px;
+    width: fit-content;
+    height: fit-content;
 }
 
 @media only screen and (max-width: 850px) {
     .uitje {
         width: 100%;
-        margin-top: 86px;
         margin-left: 0%;
         margin-right: 0%;
+        position: relative;
+        top: 108px;
+        left: 24px;
         height: 227px;
     }
 

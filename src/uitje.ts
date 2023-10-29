@@ -45,7 +45,10 @@ async function laatZien(): Promise<void> {
             //link voor button aanpassen uitje
             const linkAanpas: HTMLAnchorElement = document.createElement("a");
             linkAanpas.href = `uitjeBewerk.html?id=${row.eventId}`;
-
+            //button om uitje af te sluiten
+            const buttonSluiten: HTMLElement | null = document.createElement("button");
+            buttonSluiten.className = "sluitUitje";
+            buttonSluiten.textContent = "Sluit dit uitje af";
 
             //link voor button aanpassen uitje
             const linkJoin: HTMLAnchorElement = document.createElement("a");
@@ -69,18 +72,16 @@ async function laatZien(): Promise<void> {
             buttonAanpas.textContent = "Wijzig dit uitje!";
             //style aan button
             buttonAanpas.style.backgroundColor = "#2eb807";
-            buttonAanpas.style.marginLeft = "15px";
 
             linkJoin.appendChild(buttonJoin);
             linkAanpas.appendChild(buttonAanpas);
-
             div.appendChild(paragraaf);
             div.appendChild(paragraaf2);
             div.appendChild(linkAanpas);
             div.appendChild(linkJoin);
+            div.appendChild(buttonSluiten);
             data?.appendChild(div);
         });
-
     } else {
         // Display a message when no data is found
         data.textContent = "Geen data gevonden";

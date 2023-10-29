@@ -42,14 +42,16 @@ async function laatZien(): Promise<void> {
             div.style.display = "flex";
 
             //paragraaf voor naam van uitje
-            const paragraaf: HTMLElement | null = document.createElement("p");
+            const paragraaf: HTMLElement | null = document.createElement("input");
             paragraaf.id = "uitjeNaam";
-            paragraaf.textContent = `Naam van uitje: ${row.description}`;
+            paragraaf.disabled = true;
+            paragraaf.value = `Naam van uitje: ${row.description}`;
 
             //paragraaf voor prijs van uitje
-            const paragraaf2: HTMLElement | null = document.createElement("p");
+            const paragraaf2: HTMLElement | null = document.createElement("input");
             paragraaf2.id = "uitjePrijs";
-            paragraaf2.textContent = `Prijs van uitje: ${row.price}`;
+            paragraaf2.disabled = true;
+            paragraaf2.value = `Prijs van uitje: ${row.price}`;
 
             //namen ophalen voor label vanuit de database
             if (resultaat2 && resultaat2.length > 0) {

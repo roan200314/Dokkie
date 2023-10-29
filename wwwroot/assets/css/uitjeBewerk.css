@@ -43,14 +43,20 @@ body {
 #uitjeNaam {
     margin-right: 15px;
     position: relative;
-    left: -286px;
-    top: 10px;
+    left: -146px;
+    top: 13px;
+    height: fit-content;
+    width: fit-content;
+    font-weight: bold;
 }
 
 #prijsUitje {
     position: relative;
-    right: 450px;
-    bottom: -59px;
+    right: 344px;
+    bottom: 13px;
+    width: fit-content;
+    font-weight: bold;
+    height: fit-content;
 }
 
 #persoonNaam {
@@ -58,11 +64,19 @@ body {
     bottom: 479px;
 }
 
-div input {
-    width: 55px;
-    height: 35px;
+#voegDeelnemer {
+    position: relative;
+    left: -166px;
+    top: 27px;
+}
+#form1 {
+    width: fit-content;
+    height: fit-content;
     margin-top: 10px;
     margin-left: 10px;
+    position: relative;
+    top: 12px;
+    left: 5px;
 }
 
 div button {
@@ -77,8 +91,12 @@ button:hover {
 
 div #betaling {
     font-size: 12px;
-    width: 129px;
-    height: 50px;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    top: 22px;
+    left: 10px;
+
 }
 
 @media only screen and (max-width: 850px) {
@@ -101,16 +119,17 @@ div #betaling {
 
     #uitjeNaam {
         position: relative;
-        left: -8px;
+        left: 7px;
         top: 10px;
-        font-size: 18px;
+        width: fit-content;
+        height: fit-content;
     }
-
     #prijsUitje {
         position: relative;
         left: -5px;
         top: 10px;
-        font-size: 18px;
+        height: fit-content;
+        width: fit-content;
     }
 
     #personenText {
@@ -142,5 +161,11 @@ div #betaling {
         position: relative;
         left: 111px;
         top: -43px;
+    }
+
+    #voegDeelnemer {
+        position: relative;
+        left: -166px;
+        top: 27px;
     }
 }
