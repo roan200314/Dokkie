@@ -49,6 +49,7 @@ async function laatZien(): Promise<void> {
             const buttonSluiten: HTMLElement | null = document.createElement("button");
             buttonSluiten.className = "sluitUitje";
             buttonSluiten.textContent = "Sluit dit uitje af";
+            buttonSluiten.addEventListener("click", sluiten);
 
             //link voor button aanpassen uitje
             const linkJoin: HTMLAnchorElement = document.createElement("a");
@@ -86,4 +87,8 @@ async function laatZien(): Promise<void> {
         // Display a message when no data is found
         data.textContent = "Geen data gevonden";
     }
+}
+
+async function sluiten(): Promise<void> {
+//  buttonJoin.style.display = "none";
 }

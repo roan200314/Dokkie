@@ -13,12 +13,16 @@ const event: any[] = (await runQuery("SELECT * FROM event WHERE eventId = (?)", 
 const participant: any[] | undefined = (await runQuery("SELECT * FROM participant WHERE eventId = (?)", [
     id,
 ])) as any;
+const payment: any[] | undefined = (await runQuery("SELECT * FROM payment WHERE eventId = (?)", [id])) as any;
 
 const uitjeDB: any = event[0];
 const participantDB: any = participant[0];
+const paymentDB: any = payment[0];
 const prijsUitje: number = uitjeDB.price;
 const aantalDeelnemers: number = participant.length;
 const prijsPerDeelnemer: number = prijsUitje / aantalDeelnemers;
+// const prijsBetalen: number = prijsUitje - `${paymentDB.amount}`;
+// console.log(`${paymentDB.amount}`);
 //data opslaan in de div
 const data: HTMLElement | null = document.getElementById("uitje");
 
@@ -45,35 +49,38 @@ async function laatZien(): Promise<void> {
 
     if (participant && participant.length > 0) {
         participant.forEach((row: any) => {
-            //div maken voor de data
+            // div maken voor de data
             const div: HTMLElement | null = document.createElement("div");
             div.className = "bewerkDiv";
-            //paragraaf voor namen van het uitje
+
+            // paragraaf voor namen van het uitje
             const personenText: HTMLElement | null = document.createElement("p");
             personenText.id = "personenText";
+
             const persoonNaam: HTMLElement | null = document.createElement("p");
             persoonNaam.id = "persoonNaam";
+            persoonNaam.textContent = `${row.name}`;
+
             const pVoorBedrag: HTMLElement | null = document.createElement("p");
             pVoorBedrag.id = "pVoorBedrag";
-            const form1: HTMLElement | null = document.createElement("input");
-            form1.id = "form1";
+            pVoorBedrag.textContent = "Heeft betaald:";
 
-            const prijsVoegen: HTMLElement | null = document.createElement("button");
-            prijsVoegen.id = "betaling";
-            //form nummer kan niet lager dan 0
-            form1.type = "number";
-            form1.min = "0";
-            prijsVoegen.textContent = "Voeg betaling toe";
+            div.appendChild(personenText);
+            div.appendChild(persoonNaam);
+            div.appendChild(pVoorBedrag);
+
             personenText.textContent = "Persoon bij het uitje: ";
             pVoorBedrag.textContent = "Heeft betaald:";
             persoonNaam.id = "persoonNaam";
             persoonNaam.textContent = `${row.name}`;
 
-            div.appendChild(personenText);
-            div.appendChild(persoonNaam);
-            div.appendChild(pVoorBedrag);
+            const form1: HTMLInputElement | null = document.createElement("input");
+            form1.id = `form_${row.userId}`;
+            form1.type = "number";
+            //form nummer kan niet lager dan 0
+            form1.min = "0";
+
             div.appendChild(form1);
-            div.appendChild(prijsVoegen);
             data?.appendChild(div);
         });
     } else {
@@ -90,11 +97,14 @@ async function bereken(): Promise<void> {
     const div: HTMLElement | null = document.createElement("div");
     div.className = "prijsNaam";
     const paragraaf: HTMLElement | null = document.createElement("p");
+    // const paragraaf2: HTMLElement | null = document.createElement("p");
     paragraaf.textContent = "Iedereen moet €" + prijsPerDeelnemer.toFixed(2) + " betalen";
+    // paragraaf2.textContent = prijsBetalen;
 
     // if (prijsPerDeelnemer ==)
 
     div.appendChild(paragraaf);
+    // div.appendChild(paragraaf2);
     data?.appendChild(div);
 }
 
@@ -117,6 +127,7 @@ async function bewerken(): Promise<void> {
             `${participantDB.name}`,
         ]);
     }
+    alert("Betalingen succesvol toegevoegd.");
 }
 
 laatZien();
