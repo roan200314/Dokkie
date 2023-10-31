@@ -9,7 +9,7 @@ const IdOphalen: URL = new URL(currentURL);
 const id: string | null = IdOphalen.searchParams.get("id");
 </code>
 
-Met bovenstaande code haal ik de id op die ik in de url heb gezet hierdoor is het simpel om het verolgens op te sturen.
+Met bovenstaande code haal ik de id op die ik in de url heb dit doet die door mijn URL op te halen en in een string te zetten. Vervolgens zoekt die in de 'currentURL' of het woord 'id' voorkomt. Zo ja maakt die daar een id van. Hierdoor is het simpel om het op te sturen.
 
 
 </details>
