@@ -37,9 +37,25 @@ body {
 .faqVraag {
     font-size: 26px;
     text-align: center;
+    padding-top: 10px;
 }
 
 .faqAntwoord {
     text-align: center;
     font-size: 16px;
+}
+
+@media only screen and (max-width: 850px) { 
+    .form {
+        width: 100%;
+        margin-left: 0%;
+        padding-bottom: 15px;
+        margin-top: 15px;
+        padding-top: 11px;
+        background-color: #5c20a1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 5px 10px #888888;
+    }
 }

@@ -1,95 +1,123 @@
 import { runQuery } from "./utils/queryutil";
 
-const knopUitjeAanmake: HTMLButtonElement = document.getElementById("button_uitje") as HTMLButtonElement;
-knopUitjeAanmake.addEventListener("click", zetIn);
+// Hier selecteren we de knop om een uitje aan te maken en voegen een click-eventlistener toe.
+const knopUitjeAanmaken: HTMLButtonElement = document.getElementById("button_uitje") as HTMLButtonElement;
+knopUitjeAanmaken.addEventListener("click", zetIn);
 
+// Hier selecteren we de knop om uitjes te bekijken en voegen een click-eventlistener toe.
 const knopUitjeZien: HTMLButtonElement = document.getElementById("uitjeZien") as HTMLButtonElement;
 knopUitjeZien.addEventListener("click", laatZien);
 
+const resultaat: any[] | undefined = await runQuery("SELECT * FROM event");
+const uitjeDB: any = resultaat[0];
+
+// Deze functie wordt aangeroepen om een uitje aan te maken.
 async function zetIn(): Promise<void> {
-    //een uitje aanmaken
+    // Invoervelden voor het uitje en de prijs selecteren
     const uitjeInput: HTMLInputElement | null = document.getElementById("uit") as HTMLInputElement;
     const prijsInput: HTMLInputElement | null = document.getElementById("prijs") as HTMLInputElement;
 
-
-    // Form input velden opslaan
+    // De ingevoerde gegevens opslaan
     const uitje: string = uitjeInput.value;
     const prijs: string = prijsInput.value;
+
+    // Controleer of de invoervelden niet leeg zijn
     if (!uitje.trim() || !prijs.trim()) {
         alert("Een of meerdere gegevens niet ingevuld.");
     } else {
         alert("Uitje succesvol toegevoegd.");
     }
 
-    //inserten in database
+    // De gegevens in de database invoegen
     await runQuery("INSERT INTO event (description, price) VALUES (?)", [uitje, prijs]);
 }
 
+// Deze functie wordt aangeroepen om de uitjes weer te geven
 async function laatZien(): Promise<void> {
-    //data opslaan in de div
+    // Het element waarin de gegevens worden weergegeven selecteren
     const data: HTMLElement | null = document.getElementById("uitjeTest");
 
-    // runquery oproepen en data ophalen door een const aan te maken die alles kan pakken
+    // De gegevens uit de database ophalen
     const resultaat: any[] | undefined = await runQuery("SELECT * FROM event");
+    const uitjeDB: any = resultaat[0];
 
-    // data uit de database halen met een for statement
+    // De gegevens weergeven in de div
     if (resultaat && resultaat.length > 0) {
         resultaat.forEach((row: any) => {
             const div: HTMLElement | null = document.createElement("div");
             div.className = "alleUitjes";
-            //knop aanmaken
+
+            // Een knop aanmaken om aan een uitje deel te nemen
             const buttonJoin: HTMLElement | null = document.createElement("button");
             buttonJoin.className = "joinUitje";
-            //knop om te gaan wijzigen
-            const buttonAanpas: HTMLElement | null = document.createElement("button");
-            buttonAanpas.className = "bewerkUitje";
-            //link voor button aanpassen uitje
-            const linkAanpas: HTMLAnchorElement = document.createElement("a");
-            linkAanpas.href = `uitjeBewerk.html?id=${row.eventId}`;
-            //button om uitje af te sluiten
+
+            // Een knop om een uitje aan te passen
+            const buttonAanpassen: HTMLElement | null = document.createElement("button");
+            buttonAanpassen.className = "bewerkUitje";
+
+            // Een link om een uitje aan te passen
+            const linkAanpassen: HTMLAnchorElement = document.createElement("a");
+            linkAanpassen.href = `uitjeBewerk.html?id=${row.eventId}`;
+
+            // Een knop om een uitje af te sluiten
             const buttonSluiten: HTMLElement | null = document.createElement("button");
             buttonSluiten.className = "sluitUitje";
             buttonSluiten.textContent = "Sluit dit uitje af";
             buttonSluiten.addEventListener("click", sluiten);
 
-            //link voor button aanpassen uitje
+            // Een link om aan een uitje deel te nemen
             const linkJoin: HTMLAnchorElement = document.createElement("a");
             linkJoin.href = `uitjeJoin.html?id=${row.eventId}`;
 
-            //paragraaf voor naam
+            // Een paragraaf om de naam van het uitje weer te geven
             const paragraaf: HTMLElement | null = document.createElement("p");
             paragraaf.id = "soortUitje";
             paragraaf.textContent = `Soort Uitje: ${row.description}`;
-            //text voor de button
-            buttonJoin.textContent = "Join dit uitje!";
-            //style aan button
+
+            // De tekst voor de knop om aan een uitje deel te nemen
+            buttonJoin.textContent = "Doe mee aan dit uitje!";
+
+            // De stijl van de knop
             buttonJoin.style.backgroundColor = "#5c20a1";
 
-            //paragraaf voor de prijs
+            // Een paragraaf om de prijs van het uitje weer te geven
             const paragraaf2: HTMLElement | null = document.createElement("p");
             paragraaf2.id = "prijsUitje";
             paragraaf2.textContent = `Prijs Uitje: €${row.price}`;
             paragraaf2.style.marginLeft = "10px";
-            //text voor de button
-            buttonAanpas.textContent = "Wijzig dit uitje!";
-            //style aan button
-            buttonAanpas.style.backgroundColor = "#2eb807";
 
+            // De tekst voor de knop om een uitje aan te passen
+            buttonAanpassen.textContent = "Pas dit uitje aan!";
+
+            // De stijl van de knop
+            buttonAanpassen.style.backgroundColor = "#2eb807";
+
+            // De knoppen en paragrafen aan de div toevoegen
             linkJoin.appendChild(buttonJoin);
-            linkAanpas.appendChild(buttonAanpas);
+            linkAanpassen.appendChild(buttonAanpassen);
             div.appendChild(paragraaf);
             div.appendChild(paragraaf2);
-            div.appendChild(linkAanpas);
+            div.appendChild(linkAanpassen);
             div.appendChild(linkJoin);
             div.appendChild(buttonSluiten);
             data?.appendChild(div);
         });
     } else {
-        // Display a message when no data is found
-        data.textContent = "Geen data gevonden";
+        // Een bericht weergeven als er geen gegevens zijn
+        data.textContent = "Geen gegevens gevonden";
     }
 }
 
+// Deze functie wordt aangeroepen wanneer een uitje wordt afgesloten
 async function sluiten(): Promise<void> {
-//  buttonJoin.style.display = "none";
+    const confirmation: any = confirm(
+        "Weet je zeker dat je dit uitje wilt verwijderen? Dit kan niet ongedaan worden gemaakt."
+    );
+    if (confirmation) {
+      // Roep de verwijderingsquery aan
+      await runQuery("DELETE FROM event WHERE eventId = (?)", [`${uitjeDB.eventId}`]);
+      console.log(`${uitjeDB.description}`);
+      // Eventueel kun je hier code toevoegen om de weergave bij te werken of een bevestigingsbericht weer te geven.
+  }
 }
+

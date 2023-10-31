@@ -21,7 +21,7 @@ const paymentDB: any = payment[0];
 const prijsUitje: number = uitjeDB.price;
 const aantalDeelnemers: number = participant.length;
 const prijsPerDeelnemer: number = prijsUitje / aantalDeelnemers;
-// const prijsBetalen: number = prijsUitje - `${paymentDB.amount}`;
+const prijsBetalen: number = prijsUitje - `${paymentDB.amount}`;
 // console.log(`${paymentDB.amount}`);
 //data opslaan in de div
 const data: HTMLElement | null = document.getElementById("uitje");
@@ -97,11 +97,11 @@ async function bereken(): Promise<void> {
     const paragraaf: HTMLElement | null = document.createElement("p");
     // const paragraaf2: HTMLElement | null = document.createElement("p");
     paragraaf.textContent = "Iedereen moet €" + prijsPerDeelnemer.toFixed(2) + " betalen";
-    // paragraaf2.textContent = prijsBetalen;
-
-    // if (prijsPerDeelnemer ==)
+    const prijsOver: HTMLElement | null = document.createElement("p");
+    prijsOver.textContent = prijsBetalen; 
 
     div.appendChild(paragraaf);
+    div.appendChild(prijsOver);
     // div.appendChild(paragraaf2);
     data?.appendChild(div);
 }
@@ -121,7 +121,7 @@ async function bewerken(): Promise<void> {
     const inputnaamArray: any = Array.from(inputnaamElements);
 
     if (inputArray.length !== inputnaamArray.length) {
-        alert("Mismatched input and name elements.");
+        alert("Geen input.");
         return;
     }
 

@@ -43,7 +43,7 @@ body {
 #uitjeNaam {
     margin-right: 15px;
     position: relative;
-    left: -146px;
+    left: -175px;
     top: 13px;
     height: fit-content;
     width: fit-content;
@@ -52,7 +52,7 @@ body {
 
 #prijsUitje {
     position: relative;
-    right: 344px;
+    right: 374px;
     bottom: 13px;
     width: fit-content;
     font-weight: bold;
