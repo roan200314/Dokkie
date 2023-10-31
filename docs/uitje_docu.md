@@ -40,6 +40,7 @@ Vervolgens is er een functie zetIn(); hierin heb ik de inputs gedefinieerd en ee
 Met deze query inject hij de bovenstaande data in de database.
 
 <details>
+<summary>laatZien functie</summary>
 #uitjes laten zien
 
 async function laatZien(): Promise<void> {}
