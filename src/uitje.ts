@@ -11,6 +11,7 @@ async function zetIn(): Promise<void> {
     const uitjeInput: HTMLInputElement | null = document.getElementById("uit") as HTMLInputElement;
     const prijsInput: HTMLInputElement | null = document.getElementById("prijs") as HTMLInputElement;
 
+
     // Form input velden opslaan
     const uitje: string = uitjeInput.value;
     const prijs: string = prijsInput.value;

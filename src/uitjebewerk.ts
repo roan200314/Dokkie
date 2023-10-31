@@ -56,9 +56,11 @@ async function laatZien(): Promise<void> {
             // paragraaf voor namen van het uitje
             const personenText: HTMLElement | null = document.createElement("p");
             personenText.id = "personenText";
+            personenText.textContent = "Persoon bij het uitje: ";
 
             const persoonNaam: HTMLElement | null = document.createElement("p");
-            persoonNaam.id = "persoonNaam";
+            persoonNaam.className = "persoonNaam";
+            persoonNaam.id = `persoonNaam_${row.userId}`;
             persoonNaam.textContent = `${row.name}`;
 
             const pVoorBedrag: HTMLElement | null = document.createElement("p");
@@ -69,12 +71,8 @@ async function laatZien(): Promise<void> {
             div.appendChild(persoonNaam);
             div.appendChild(pVoorBedrag);
 
-            personenText.textContent = "Persoon bij het uitje: ";
-            pVoorBedrag.textContent = "Heeft betaald:";
-            persoonNaam.id = "persoonNaam";
-            persoonNaam.textContent = `${row.name}`;
-
             const form1: HTMLInputElement | null = document.createElement("input");
+            form1.className = "input";
             form1.id = `form_${row.userId}`;
             form1.type = "number";
             //form nummer kan niet lager dan 0
@@ -107,26 +105,39 @@ async function bereken(): Promise<void> {
     // div.appendChild(paragraaf2);
     data?.appendChild(div);
 }
-
 async function bewerken(): Promise<void> {
-    const invoer: HTMLInputElement | null = document.getElementById("form1") as HTMLInputElement;
-    const betaald: any = invoer.value;
+    const inputElements: any = document.getElementsByClassName("input");
+    const inputnaamElements: any = document.getElementsByClassName("persoonNaam");
+
+    if (!inputElements.length || !inputnaamElements.length) {
+        alert("No input elements found.");
+        return;
+    }
 
     const currentDate: date = new Date().toISOString().slice(0, 19).replace("T", " ");
-
-    console.log(betaald);
-
     const aantalMensen: any = participant?.length;
 
-    for (let i: any = 1; i <= aantalMensen; i++) {
+    const inputArray: any = Array.from(inputElements);
+    const inputnaamArray: any = Array.from(inputnaamElements);
+
+    if (inputArray.length !== inputnaamArray.length) {
+        alert("Mismatched input and name elements.");
+        return;
+    }
+
+    for (let i: any = 0; i < inputArray.length; i++) {
+        const betaald: any = inputArray[i].value;
+        const naam: any = inputnaamArray[i].textContent; // Assuming you want the text content
+
         await runQuery("INSERT INTO payment (datePaid, description, amount, eventId, name) VALUES (?)", [
             currentDate,
             `${uitjeDB.description}`,
             betaald,
             id,
-            `${participantDB.name}`,
+            naam,
         ]);
     }
+
     alert("Betalingen succesvol toegevoegd.");
 }
 

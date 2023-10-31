@@ -59,7 +59,7 @@ body {
     height: fit-content;
 }
 
-#persoonNaam {
+.persoonNaam {
     margin-right: 15px;
     bottom: 479px;
 }
@@ -69,7 +69,7 @@ body {
     left: -166px;
     top: 27px;
 }
-input {
+.input {
     width: fit-content;
     height: fit-content;
     margin-top: 10px;
@@ -96,7 +96,6 @@ div #betaling {
     position: relative;
     top: 22px;
     left: 10px;
-
 }
 
 @media only screen and (max-width: 850px) {
@@ -140,7 +139,7 @@ div #betaling {
         left: 10px;
     }
 
-    #persoonNaam {
+    .persoonNaam {
         font-size: 20px;
         position: relative;
         top: -19px;
@@ -153,7 +152,7 @@ div #betaling {
         left: 10px;
     }
 
-    input {
+    .input {
         position: relative;
         left: 159px;
         top: -103px;
