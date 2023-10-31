@@ -9,7 +9,7 @@ const IdOphalen: URL = new URL(currentURL);
 const id: string | null = IdOphalen.searchParams.get("id");
 </code>
 
-Met bovenstaande code haal ik de id op die ik in de url heb gezet hierdoor is het simpel om het verolgens op te sturen.
+Met bovenstaande code haal ik de id op die ik in de url heb dit doet die door mijn URL op te halen en in een string te zetten. Vervolgens zoekt die in de 'currentURL' of het woord 'id' voorkomt. Zo ja maakt die daar een id van. Hierdoor is het simpel om het op te sturen.
 
 
 </details>
@@ -27,7 +27,7 @@ Met bovenstaande code haal je alles op uit de database uit de tabel event, en me
 
 <details>
 <summary>LaatZien functie</summary>
-<code>
+<code> 
 async function laatZien(): Promise<void> {
     // Maak een div aan voor de gegevens.
     const div: HTMLElement | null = document.createElement("div");
@@ -97,4 +97,4 @@ async function laatZien(): Promise<void> {
 laatZien();
 </code>
 
-Met bovenstaande code heb ik ervoor gezorgd dat bij het inladen van de pagina de gegevens worden laten zien van het uitje dat is aangeklikt. Zo heb ik een foreach waarin ik alle gegevens oproep die ik nodig heb om de gegevens uit de database op het scherm te zetten.
+Met bovenstaande code heb ik ervoor gezorgd dat bij het inladen van de pagina de gegevens worden laten zien van het uitje dat is aangeklikt. Zo heb ik een foreach waarin ik alle gegevens oproep die ik nodig heb om de gegevens uit de database op het scherm te zetten. Zo maak ik ook nog paragraven en zet ik daar tekst aan vast en ook bij knoppen.
