@@ -59,12 +59,6 @@ async function laatZien(): Promise<void> {
             const linkAanpassen: HTMLAnchorElement = document.createElement("a");
             linkAanpassen.href = `uitjeBewerk.html?id=${row.eventId}`;
 
-            // Een knop om een uitje af te sluiten
-            const buttonSluiten: HTMLElement | null = document.createElement("button");
-            buttonSluiten.className = "sluitUitje";
-            buttonSluiten.textContent = "Sluit dit uitje af";
-            buttonSluiten.addEventListener("click", sluiten);
-
             // Een link om aan een uitje deel te nemen
             const linkJoin: HTMLAnchorElement = document.createElement("a");
             linkJoin.href = `uitjeJoin.html?id=${row.eventId}`;
@@ -99,25 +93,11 @@ async function laatZien(): Promise<void> {
             div.appendChild(paragraaf2);
             div.appendChild(linkAanpassen);
             div.appendChild(linkJoin);
-            div.appendChild(buttonSluiten);
             data?.appendChild(div);
         });
     } else {
         // Een bericht weergeven als er geen gegevens zijn
         data.textContent = "Geen gegevens gevonden";
     }
-}
-
-// Deze functie wordt aangeroepen wanneer een uitje wordt afgesloten
-async function sluiten(): Promise<void> {
-    const confirmation: any = confirm(
-        "Weet je zeker dat je dit uitje wilt verwijderen? Dit kan niet ongedaan worden gemaakt."
-    );
-    if (confirmation) {
-      // Roep de verwijderingsquery aan
-      await runQuery("DELETE FROM event WHERE eventId = (?)", [`${uitjeDB.eventId}`]);
-      console.log(`${uitjeDB.description}`);
-      // Eventueel kun je hier code toevoegen om de weergave bij te werken of een bevestigingsbericht weer te geven.
-  }
 }
 

@@ -1,64 +1,66 @@
 import { runQuery } from "./utils/queryutil";
+
+// Selecteer de knop om een gebruiker toe te voegen aan een uitje en voeg een click-eventlistener toe.
 const knopGebruiker: HTMLButtonElement = document.getElementById("submit") as HTMLButtonElement;
 knopGebruiker.addEventListener("click", zetIn);
 
-//de id ophalen uit de url
+// Haal de ID op uit de URL.
 const currentURL: string = window.location.href;
-//opslaan in een string
 const IdOphalen: URL = new URL(currentURL);
-//gelijk zetten aan de searchparams.
 const id: string | null = IdOphalen.searchParams.get("id");
 
-// runquery oproepen en data ophalen door een const aan te maken die alles kan pakken
+// Haal gegevens op uit de database voor het specifieke uitje.
 const resultaat: any[] | undefined = await runQuery("SELECT * FROM event WHERE eventId = (?)", [id]);
 
-//alle gebruikers laten zien voor dropdown
+// Haal alle gebruikers op om weer te geven in een dropdown.
 const resultaat2: any[] | undefined = await runQuery("SELECT * FROM user");
 
-
+// Definieer variabelen voor het uitje en de gebruikers.
 const link: any = resultaat[0];
 const user: any = resultaat2[0];
 
+// Functie om gegevens weer te geven.
 async function laatZien(): Promise<void> {
-    //data opslaan in de div
+    // Data opslaan in de div voor het uitje.
     const data: HTMLElement | null = document.getElementById("uitje");
 
+    // Data opslaan in de div voor de namen.
     const data2: HTMLElement | null = document.getElementById("namen");
 
-    //naar wijzig uitje gaan
+    // Link om het uitje te wijzigen.
     const linkAanpas: HTMLAnchorElement = document.createElement("a");
     linkAanpas.id = "wijzig";
     linkAanpas.textContent = "Wijzig uitje";
     linkAanpas.href = `uitjebewerk.html?id=${link.eventId}`;
 
-    const paragraaf: HTMLElement | null = document.createElement("p");
+    // Paragraaf om de naam van het uitje weer te geven.
+    const paragraaf: HTMLElement | null = document.createElement("input");
     paragraaf.textContent = `Soort Uitje: ${link.description}`;
+    paragraaf.disabled = true;
 
-    //uitje op scherm laten zien
     if (resultaat && resultaat.length > 0) {
         resultaat.forEach((row: any) => {
-            //div maken voor de data
+            // Div aanmaken voor de gegevens.
             const div: HTMLElement | null = document.createElement("div");
             div.style.display = "flex";
 
-            //paragraaf voor naam van uitje
+            // Paragraaf voor de naam van het uitje.
             const paragraaf: HTMLElement | null = document.createElement("input");
             paragraaf.id = "uitjeNaam";
             paragraaf.disabled = true;
             paragraaf.value = `Naam van uitje: ${row.description}`;
 
-            //paragraaf voor prijs van uitje
+            // Paragraaf voor de prijs van het uitje.
             const paragraaf2: HTMLElement | null = document.createElement("input");
             paragraaf2.id = "uitjePrijs";
             paragraaf2.disabled = true;
             paragraaf2.value = `Prijs van uitje: ${row.price}`;
 
-            //namen ophalen voor label vanuit de database
+            // Namen ophalen uit de database voor het label.
             if (resultaat2 && resultaat2.length > 0) {
                 resultaat2.forEach((gebruiker: any) => {
                     const label: HTMLElement | null = document.createElement("option");
                     label.textContent = `${gebruiker.username}`;
-
                     data2?.appendChild(label);
                 });
             }
@@ -70,16 +72,20 @@ async function laatZien(): Promise<void> {
     }
 }
 
-//functie om naam in database te zetten aan uitje
+// Functie om een naam aan het uitje toe te voegen in de database.
 async function zetIn(): Promise<void> {
     const naaminput: HTMLInputElement | null = document.getElementById("namen") as HTMLInputElement;
 
     const naam: string = naaminput.value;
 
-
-    //inserten in database
-    await runQuery("INSERT INTO participant (eventId, name, userId) VALUES (?)", [id, naam, `${user.userId}`]);
+    // Toevoegen aan de database.
+    await runQuery("INSERT INTO participant (eventId, name, userId) VALUES (?)", [
+        id,
+        naam,
+        `${user.userId}`,
+    ]);
     alert(naam + " is succesvol toegevoegd aan het uitje.");
 }
 
+// Roep de functie aan om gegevens weer te geven.
 laatZien();
