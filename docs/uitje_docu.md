@@ -111,4 +111,9 @@ async function laatZien(): Promise<void> {
 Met bovenstaande functie naam heb ik ervoor gezorgd dat met een knopje alle uitjes worden laten zien.
 vervolgens is er een forEach statement die ervoor zorgt dat die door alle uitjes loopt. Daarbij heb ik een div, waarin 2 buttons, 2 paragrafen zitten. hij kijkt dan of resultaat en waarde heeft. Als dat zo is voert die de functie uit, zo niet krijg je een "Geen gegevens gevonden" tekst te zien.
 
+Ook heb ik deze regel code:
+<code>linkJoin.href = `uitjeJoin.html?id=${row.eventId}`;</code>
+
+Hierin zet ik aan het einde van de url de ID zodat ik dan als ik naar de pagina ga de gegevens kan ophalen van het specifieke ID dat ik heb aangeklikt.
+
 </details>
