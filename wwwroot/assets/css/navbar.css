@@ -1,105 +1,109 @@
-
-
-
-#naam{
+#naam {
     font-size: 33px;
-    }
-    
-    .navbar {
-          text-decoration: none;
-          display: flex;
-          align-content: center;
-          flex-direction: row;
-          font-size: 24px;
-          margin-bottom: 15px;
-          padding-bottom: 15px;
-          padding-top: 5px;
-    }
-    .topnav {
-        margin-left: 15px;
-        padding-top: 15px;
-    }
-    .topnav a {
+}
 
-        padding-left: 15px;
-        text-decoration: none;
-        /* color: #E3B448; */
-        color: #5c20a1;
-        margin-left: 25px;
+/* Stijlen voor de navigatiebalk */
+.navbar {
+    /* Geen onderstreping voor koppelingen */
+    text-decoration: none;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    font-size: 24px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+
+/* Stijlen voor de bovenste navigatie */
+.topnav {
+    margin-left: 15px;
+    padding-top: 15px;
+}
+
+.topnav a {
+    padding-left: 15px;
+    text-decoration: none;
+    /* Kleur voor de link */
+    color: #5c20a1;
+    margin-left: 25px;
+}
+
+.topnav a:hover {
+    /* Kleur bij hover */
+    color: #D2A337;
+}
+
+/* Stijlen voor het navigatielogin-gedeelte */
+.navLog {
+    padding-top: 28px;
+    position: absolute;
+    right: 0;
+    padding-right: 60px;
+    margin-right: 15px;
+}
+
+.navLog a {
+    text-decoration: none;
+}
+
+.navLog a:hover {
+    /* Kleur bij hover */
+    color: #D2A337;
+}
+
+/* Stijlen voor het responsieve icoon */
+.respdiv .icon {
+    display: none;
+}
+
+i {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Responsieve stijlen */
+@media only screen and (max-width: 850px) {
+    /* Stijlen voor de navigatiebalk in responsieve modus */
+    .navbar.responsive {
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        background-color: #e8e8e8;
     }
-    
-    .topnav a:hover {
-        color: #D2A337;
-    }
-    
-    .navLog {
-        padding-top: 28px;
+
+    /* Stijlen voor het responsieve icoon */
+    .respdiv a.icon {
         position: absolute;
         right: 0;
-        padding-right: 60px;
-        margin-right: 15px;
+        display: block;
+        padding-top: 32px;
     }
 
-    .navLog a {
-        text-decoration: none;
-        
-    }
-
-    .navLog a:hover {
-        color: #D2A337;
-
-    }
-
-    .respdiv .icon {
+    /* Verberg koppelingen behalve de eerste in responsieve modus */
+    .navbar a:not(:first-child) {
         display: none;
     }
-    
-    i {
-        padding-left: 15px;
-        padding-right: 15px;
+
+    /* Verberg het login-gedeelte in responsieve modus */
+    .navbar .navLog {
+        display: none;
     }
 
+    /* Toon het login-gedeelte in responsieve modus */
+    .navbar.responsive .navLog {
+        display: block;
+    }
 
-    /* /////////////////////////////////// */
-    /* responsive */
+    /* Responsieve stijlen voor topnav-koppelingen */
+    .topnav a {
+        padding-left: 0px;
+        margin-left: 0px;
+    }
 
-    @media only screen and (max-width: 850px) {
-
-        .navbar.responsive {
-            position: fixed;
-            z-index: 100;
-            width: 100%;
-            height: 100%;
-            background-color: #e8e8e8;
-        }
-        
-        .respdiv a.icon 
-            {
-        	    position: absolute;
-                right: 0;
-                display: block;
-                padding-top: 32px;
-            } 
-           .navbar a:not(:first-child) 
-            {
-                display: none;
-            }
-            .navbar .navLog {
-                display: none;
-            }
-            .navbar.responsive .navLog  {
-                display: block;
-            }
-           
-
-           .topnav a {
-            padding-left: 0px;
-            margin-left: 0px;
-           }
-
-           
-           .navbar.responsive a {
-            display: block;
-            
-           }
-        }
+    /* Toon koppelingen in responsieve modus */
+    .navbar.responsive a {
+        display: block;
+    }
+}

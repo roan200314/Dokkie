@@ -4,12 +4,14 @@ body {
     font-family: "Anton", sans-serif;
 }
 
+/* Stijlen voor de container */
 .container {
     background-color: #eddbda;
     width: 33%;
     border-radius: 33%;
 }
 
+/* Stijlen voor het formulier */
 .form {
     width: 60%;
     margin-left: 20%;
@@ -23,6 +25,7 @@ body {
     box-shadow: 5px 10px #888888;
 }
 
+/* Stijlen voor knoppen */
 .buttonuit {
     font-size: 16px;
     box-shadow: 1px 4px;
@@ -32,6 +35,7 @@ body {
     cursor: pointer;
 }
 
+/* Stijlen voor de knop 'Uitjes Zien' */
 #uitjeZien {
     font-size: 16px;
     box-shadow: 1px 4px;
@@ -43,6 +47,7 @@ body {
     cursor: pointer;
 }
 
+/* Stijlen voor alle uitjes */
 .alleUitjes {
     border-width: 2px;
     border-style: solid;
@@ -54,22 +59,26 @@ body {
     align-items: stretch;
 }
 
+/* Stijlen voor de beschrijving van een uitje */
 #soortUitje {
     margin-left: 10px;
 }
 
+/* Stijlen voor de knop om aan een uitje deel te nemen */
 .joinUitje {
     float: right;
     width: 101px;
     height: 36px;
     position: relative;
     top: -43px;
+    background-color: #5c20a1;
 }
 
 .joinUitje:hover {
     cursor: pointer;
 }
 
+/* Stijlen voor de knop om een uitje aan te passen */
 .bewerkUitje {
     margin-bottom: 15px;
     float: right;
@@ -77,12 +86,15 @@ body {
     height: 36px;
     position: relative;
     top: -55px;
+    background-color: #2eb807;
 }
 
 .bewerkUitje:hover {
     cursor: pointer;
+    background-color: #1eb706;
 }
 
+/* Stijlen voor de knop om een uitje af te sluiten */
 .sluitUitje {
     display: flex;
     justify-content: center;
@@ -90,32 +102,21 @@ body {
     cursor: pointer;
 }
 
-
-/* RESPONSIVE */
+/* Responsieve stijlen */
 @media only screen and (max-width: 850px) {
+    /* Aanpassing voor het formulier in responsieve modus */
     .form {
         width: 80%;
         margin-left: 11%;
         margin-top: 86px;
     }
-    .buttonuit {
-        margin-top: 30px;
-        height: 23px;
+
+    /* Aanpassing voor knop 'Uitjes Zien' in responsieve modus */
+    #uitjeZien {
+        margin-left: 108px;
     }
 
-    #uit {
-        margin-bottom: 30px;
-        height: 23px;
-    }
-
-    #prijs {
-        height: 23px;
-    }
-
-    .inputVeld {
-        margin-right: 13px;
-    }
-
+    /* Aanpassing voor de knop om aan een uitje deel te nemen in responsieve modus */
     .joinUitje {
         width: 102px;
         height: 30px;
@@ -123,6 +124,7 @@ body {
         top: -40px;
     }
 
+    /* Aanpassing voor de knop om een uitje aan te passen in responsieve modus */
     .bewerkUitje {
         margin-bottom: 30px;
         height: 30px;
@@ -130,10 +132,7 @@ body {
         top: -56px;
     }
 
-    #uitjeZien {
-        margin-left: 108px;
-    }
-
+    /* Aanpassing voor de knop om een uitje af te sluiten in responsieve modus */
     .sluitUitje {
         display: flex;
         justify-content: center;

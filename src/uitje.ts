@@ -71,9 +71,6 @@ async function laatZien(): Promise<void> {
             // De tekst voor de knop om aan een uitje deel te nemen
             buttonJoin.textContent = "Doe mee aan dit uitje!";
 
-            // De stijl van de knop
-            buttonJoin.style.backgroundColor = "#5c20a1";
-
             // Een paragraaf om de prijs van het uitje weer te geven
             const paragraaf2: HTMLElement | null = document.createElement("p");
             paragraaf2.id = "prijsUitje";
@@ -82,9 +79,6 @@ async function laatZien(): Promise<void> {
 
             // De tekst voor de knop om een uitje aan te passen
             buttonAanpassen.textContent = "Pas dit uitje aan!";
-
-            // De stijl van de knop
-            buttonAanpassen.style.backgroundColor = "#2eb807";
 
             // De knoppen en paragrafen aan de div toevoegen
             linkJoin.appendChild(buttonJoin);
@@ -100,4 +94,3 @@ async function laatZien(): Promise<void> {
         data.textContent = "Geen gegevens gevonden";
     }
 }
-

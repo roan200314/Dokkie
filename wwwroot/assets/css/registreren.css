@@ -1,9 +1,11 @@
+/* Stijlen voor de gehele webpagina */
 body {
     font-size: 1.2em;
     background-color: #e8e8e8;
     font-family: "Anton", sans-serif;
 }
 
+/* Stijlen voor de container */
 .container {
     width: 60%;
     margin-left: 20%;
@@ -16,58 +18,123 @@ body {
     align-items: center;
     box-shadow: 5px 10px #888888;
 }
+
+/* Stijlen voor de registratietekst */
 #regi {
     font-size: 28px;
 }
 
+/* Stijlen voor de registreerknop */
 #button_registreer {
     font-size: 20px;
     box-shadow: 1px 4px;
     margin-top: 33px;
 }
 
+/* Stijlen voor de registreerknop bij hover */
 #button_registreer:hover {
     cursor: pointer;
     background-color: #e8e8e8;
     font-weight: bold;
 }
 
+/* Stijlen voor het e-mail label */
 #emailSpan {
     position: relative;
     left: -26px;
     top: 5px;
 }
 
+/* Stijlen voor het wachtwoord label */
 #wachtwoordSpan {
     position: relative;
     left: 0px;
     top: 4px;
 }
 
+/* Stijlen voor het gebruikersnaam label */
 #userSpan {
     position: relative;
     left: 15px;
     top: 5px;
 }
 
+/* Stijlen voor het e-mail inputveld */
 #email {
     position: relative;
     left: 97px;
     top: 3px;
 }
 
+/* Stijlen voor het wachtwoord inputveld */
 #password {
     position: relative;
     left: 70px;
     top: 3px;
 }
 
-#username{
+/* Stijlen voor het gebruikersnaam inputveld */
+#username {
     position: relative;
     left: 55px;
     top: 3px;
 }
 
-/* RESPONSIVE */
+/* Responsieve stijlen voor schermen kleiner dan 850px */
 @media only screen and (max-width: 850px) {
+    /* Responsieve stijlen voor de container */
+    .container {
+        width: 100%;
+        margin-left: 0%;
+        padding-bottom: 15px;
+        margin-top: 15px;
+        padding-top: 11px;
+        background-color: #5c20a1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 5px 10px #888888;
+    }
+
+    /* Responsieve stijlen voor het e-mail label */
+    #emailSpan {
+        position: relative;
+        left: -51px;
+        top: 5px;
+    }
+
+    /* Responsieve stijlen voor het wachtwoord label */
+    #wachtwoordSpan {
+        position: relative;
+        left: -26px;
+        top: 5px;
+    }
+
+    /* Responsieve stijlen voor het gebruikersnaam label */
+    #userSpan {
+        position: relative;
+        left: -11px;
+        top: 5px;
+    }
+
+    /* Responsieve stijlen voor het e-mail inputveld */
+    #email {
+        position: relative;
+        left: 36px;
+        top: 5px;
+    }
+
+    /* Responsieve stijlen voor het wachtwoord inputveld */
+    #password {
+        position: relative;
+        left: 9px;
+        top: 5px;
+    }
+
+    /* Responsieve stijlen voor het gebruikersnaam inputveld */
+    #username {
+        position: relative;
+        left: -6px;
+        top: 3px;
+    }
 }

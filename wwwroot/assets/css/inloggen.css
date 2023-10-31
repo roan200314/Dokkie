@@ -1,9 +1,11 @@
+/* Stijlen voor de gehele webpagina */
 body {
     font-size: 1.2em;
     background-color: #e8e8e8;
     font-family: 'Anton', sans-serif;
 }
 
+/* Stijlen voor de container */
 .container {
     width: 60%;
     height: 200px;
@@ -18,37 +20,45 @@ body {
     box-shadow: 5px 10px #888888;
 }
 
+/* Stijlen voor de inlogtekst */
 #inlog {
-font-size: 22px;
+    font-size: 22px;
 }
 
+/* Stijlen voor inputvelden */
 .inputBox {
     padding-top: 23px;
 }
+
+/* Stijlen voor het e-mail label */
 #email {
     position: relative;
     left: -41px;
     top: 3px;
 }
 
+/* Stijlen voor het e-mail inputveld */
 #emailInput {
     position: relative;
     left: -6px;
     top: 1px;
 }
 
+/* Stijlen voor het wachtwoord label */
 #wachtwoord {
     position: relative;
     left: -39px;
     top: 16px;
 }
 
+/* Stijlen voor het wachtwoord inputveld */
 #wachtwoordInput {
     position: relative;
     left: -8px;
     top: 14px;
 }
 
+/* Stijlen voor de login-knop */
 .login {
     position: relative;
     left: 252px;
@@ -57,9 +67,8 @@ font-size: 22px;
     box-shadow: 1px 4px ;
 }
 
-/* RESPONSIVE */
+/* Responsieve stijlen voor schermen kleiner dan 850px */
 @media only screen and (max-width: 850px) {
-
     .container {
         width: 100%;
         height: 250px;
@@ -75,40 +84,40 @@ font-size: 22px;
     }
     #inlog {
         font-size: 22px;
-        }
-        
-        .inputBox {
-            padding-top: 23px;
-        }
-        #email {
-            position: relative;
-            left: -41px;
-            top: 3px;
-        }
-        
-        #emailInput {
-            position: relative;
-            left: -6px;
-            top: 1px;
-        }
-        
-        #wachtwoord {
-            position: relative;
-            left: -39px;
-            top: 16px;
-        }
-        
-        #wachtwoordInput {
-            position: relative;
-            left: -8px;
-            top: 14px;
-        }
-        
-        .login {
-            position: relative;
-            left: 10px;
-            top: 41px;
-            font-size: 20px;
-            box-shadow: 1px 4px;
-        }
+    }
+    
+    .inputBox {
+        padding-top: 23px;
+    }
+    #email {
+        position: relative;
+        left: -41px;
+        top: 3px;
+    }
+    
+    #emailInput {
+        position: relative;
+        left: -6px;
+        top: 1px;
+    }
+    
+    #wachtwoord {
+        position: relative;
+        left: -39px;
+        top: 16px;
+    }
+    
+    #wachtwoordInput {
+        position: relative;
+        left: -8px;
+        top: 14px;
+    }
+    
+    .login {
+        position: relative;
+        left: 10px;
+        top: 41px;
+        font-size: 20px;
+        box-shadow: 1px 4px;
+    }
 }

@@ -1,15 +1,18 @@
+/* Stijlen voor de gehele webpagina */
 body {
     font-size: 1.2em;
     background-color: #e8e8e8;
     font-family: "Anton", sans-serif;
 }
 
+/* Stijlen voor de container */
 .container {
     background-color: #eddbda;
     width: 33%;
     border-radius: 33%;
 }
 
+/* Stijlen voor het uitje */
 .uitje {
     width: 60%;
     height: fit-content;
@@ -24,15 +27,18 @@ body {
     box-shadow: 5px 10px #888888;
 }
 
+/* Stijlen voor tekst die bewerkt wordt */
 .textBewerk {
     position: relative;
     left: 350px;
 }
 
+/* Stijlen voor de prijs en naam */
 .prijsNaam {
     display: flex;
 }
 
+/* Stijlen voor de bewerkingsdiv */
 .bewerkDiv {
     display: flex;
     margin-top: 15px;
@@ -40,6 +46,7 @@ body {
     height: fit-content;
 }
 
+/* Stijlen voor de naam van het uitje */
 #uitjeNaam {
     margin-right: 15px;
     position: relative;
@@ -50,6 +57,7 @@ body {
     font-weight: bold;
 }
 
+/* Stijlen voor de prijs van het uitje */
 #prijsUitje {
     position: relative;
     right: 374px;
@@ -59,16 +67,20 @@ body {
     height: fit-content;
 }
 
+/* Stijlen voor de persoonsnaam */
 .persoonNaam {
     margin-right: 15px;
     bottom: 479px;
 }
 
+/* Stijlen voor de knop om een deelnemer toe te voegen */
 #voegDeelnemer {
     position: relative;
     left: -166px;
     top: 27px;
 }
+
+/* Stijlen voor invoervelden */
 .input {
     width: fit-content;
     height: fit-content;
@@ -79,16 +91,19 @@ body {
     left: 5px;
 }
 
+/* Stijlen voor knoppen in div-elementen */
 div button {
     margin-left: 15px;
     font-size: 16px;
     box-shadow: 1px 4px;
 }
 
+/* Stijlen voor knoppen bij hover */
 button:hover {
     cursor: pointer;
 }
 
+/* Stijlen voor het betalingsinformatie-element */
 div #betaling {
     font-size: 12px;
     width: fit-content;
@@ -98,7 +113,9 @@ div #betaling {
     left: 10px;
 }
 
+/* Responsieve stijlen voor schermen kleiner dan 850px */
 @media only screen and (max-width: 850px) {
+    /* Responsieve stijlen voor het uitje */
     .uitje {
         width: 100%;
         margin-top: 86px;
@@ -107,6 +124,7 @@ div #betaling {
         height: fit-content;
     }
 
+    /* Responsieve stijlen voor de bewerkingsdiv */
     .bewerkDiv {
         border-width: 2px;
         border-style: solid;
@@ -117,6 +135,7 @@ div #betaling {
         height: 184px;
     }
 
+    /* Responsieve stijlen voor de naam van het uitje */
     #uitjeNaam {
         position: relative;
         left: 7px;
@@ -124,6 +143,8 @@ div #betaling {
         width: fit-content;
         height: fit-content;
     }
+
+    /* Responsieve stijlen voor de prijs van het uitje */
     #prijsUitje {
         position: relative;
         left: -5px;
@@ -132,6 +153,7 @@ div #betaling {
         width: fit-content;
     }
 
+    /* Responsieve stijlen voor tekst over personen */
     #personenText {
         font-size: 20px;
         position: relative;
@@ -139,6 +161,7 @@ div #betaling {
         left: 10px;
     }
 
+    /* Responsieve stijlen voor de persoonsnaam */
     .persoonNaam {
         font-size: 20px;
         position: relative;
@@ -146,23 +169,28 @@ div #betaling {
         left: 10px;
     }
 
+    /* Responsieve stijlen voor tekst voor het bedrag */
     #pVoorBedrag {
         position: relative;
         top: -39px;
         left: 10px;
     }
 
+    /* Responsieve stijlen voor invoervelden */
     .input {
         position: relative;
         left: 159px;
         top: -103px;
     }
+
+    /* Responsieve stijlen voor het betalingsinformatie-element */
     #betaling {
         position: relative;
         left: 111px;
         top: -43px;
     }
 
+    /* Responsieve stijlen voor de knop om een deelnemer toe te voegen */
     #voegDeelnemer {
         position: relative;
         left: -166px;

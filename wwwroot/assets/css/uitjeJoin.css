@@ -1,15 +1,18 @@
+/* Algemene stijlen voor de webpagina */
 body {
     font-size: 1.2em;
     background-color: #e8e8e8;
     font-family: "Anton", sans-serif;
 }
 
+/* Stijlen voor de container */
 .container {
     background-color: #eddbda;
     width: 33%;
     border-radius: 33%;
 }
 
+/* Stijlen voor het uitje */
 .uitje {
     width: 60%;
     height: 300px;
@@ -24,12 +27,14 @@ body {
     box-shadow: 5px 10px #888888;
 }
 
+/* Stijlen voor namen */
 .namen {
     position: relative;
     right: 272px;
     top: 26px;
 }
 
+/* Extra stijlen voor namen */
 .namen2 {
     position: relative;
     top: 0px;
@@ -37,6 +42,7 @@ body {
     font-size: 18px;
 }
 
+/* Stijlen voor de knop om te sturen */
 .knopsturen {
     margin-right: 15px;
     margin-top: 15px;
@@ -47,10 +53,12 @@ body {
     box-shadow: 1px 4px;
 }
 
+/* Stijlen voor de knop bij hover */
 .knopsturen:hover {
     cursor: pointer;
 }
 
+/* Stijlen voor koppelingen binnen het uitje */
 .uitje a {
     position: relative;
     left: 364px;
@@ -59,6 +67,7 @@ body {
     text-decoration: none;
 }
 
+/* Stijlen voor de naam van het uitje */
 #uitjeNaam {
     margin-right: 15px;
     position: relative;
@@ -68,6 +77,7 @@ body {
     height: fit-content;
 }
 
+/* Stijlen voor de prijs van het uitje */
 #uitjePrijs {
     position: relative;
     right: 448px;
@@ -76,7 +86,9 @@ body {
     height: fit-content;
 }
 
+/* Responsieve stijlen voor schermen kleiner dan 850px */
 @media only screen and (max-width: 850px) {
+    /* Responsieve stijlen voor het uitje */
     .uitje {
         width: 100%;
         margin-left: 0%;
@@ -87,17 +99,22 @@ body {
         height: 227px;
     }
 
+    /* Responsieve stijlen voor de knop om te sturen */
     .knopsturen {
         position: relative;
         left: 10px;
         top: 128px;
+        font-size: 19px;
     }
 
+    /* Responsieve stijlen voor namen */
     .namen {
         position: relative;
         left: -82px;
         top: 11px;
     }
+
+    /* Extra responsieve stijlen voor namen */
     .namen2 {
         position: relative;
         left: 67px;
@@ -105,10 +122,12 @@ body {
         font-size: 20px;
     }
 
+    /* Responsieve stijlen voor de knop bij hover */
     .knopsturen {
         font-size: 19px;
     }
 
+    /* Responsieve stijlen voor wijzigknop */
     #wijzig {
         position: relative;
         top: -9px;
@@ -116,6 +135,7 @@ body {
         width: 85px;
     }
 
+    /* Responsieve stijlen voor de naam van het uitje */
     #uitjeNaam {
         margin-right: 15px;
         position: relative;
@@ -124,6 +144,7 @@ body {
         width: 212px;
     }
 
+    /* Responsieve stijlen voor de prijs van het uitje */
     #uitjePrijs {
         position: relative;
         right: 233px;

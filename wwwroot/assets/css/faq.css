@@ -1,19 +1,23 @@
+/* Stijlen voor de gehele webpagina */
 body {
     font-size: 1.2em;
     background-color: #e8e8e8;
     font-family: "Anton", sans-serif;
 }
 
+/* Stijlen voor de container */
 .container {
     background-color: #eddbda;
     width: 33%;
     border-radius: 33%;
 }
 
+/* Stijlen voor de paginatitel */
 .titel {
     text-align: center;
 }
 
+/* Stijlen voor het formulier */
 .form {
     width: 60%;
     margin-left: 20%;
@@ -27,6 +31,7 @@ body {
     box-shadow: 5px 10px #888888;
 }
 
+/* Stijlen voor de FAQ-sectie */
 .faq1 {
     border-width: 2px;
     border-style: solid;
@@ -34,19 +39,22 @@ body {
     padding: 10px;
 }
 
+/* Stijlen voor FAQ-vragen */
 .faqVraag {
     font-size: 26px;
     text-align: center;
     padding-top: 10px;
-    
 }
 
+/* Stijlen voor FAQ-antwoorden */
 .faqAntwoord {
     text-align: center;
     font-size: 16px;
 }
 
-@media only screen and (max-width: 850px) { 
+/* Responsieve stijlen */
+@media only screen and (max-width: 850px) {
+    /* Aanpassing voor het formulier in responsieve modus */
     .form {
         width: 100%;
         margin-left: 0%;
