@@ -22,7 +22,6 @@
 
 -   Niet meer dan 1 taal gebruiken: Dit deed ik even aan het begin, maar ik heb mezelf hier snel op gecorriceerd dat ik alleen nederlands gebruik.
 
-
 # Gedragscriteria
 
 -G1: Ik neem verantwoordelijkheid voor mijn eigen werk. Zo zal ik het accepteren als ik me werk niet af heb als ik bijvoorbeeld zit te luieren.
@@ -35,19 +34,17 @@
 
 -G8: Ik bespreek mijn motivatie door bij het inchecken mijn plannen te zetten en vervolgens ook na mijn woorden na te leven.
 
-
-# retro spective 2 ##############################################################
+# retro spective 2
 
 ![retro spective](../docs/pics/retrospective.jpg)
 
 ### -nieuw
 
-- Learning stories meer oppakken. (Ik pak momenteel te weinig de learning stories op waardoor ik bepaalde kennis niet oppik.)
+-   Learning stories meer oppakken. (Ik pak momenteel te weinig de learning stories op waardoor ik bepaalde kennis niet oppik.)
 
-- Meer aan mijn project thuis werken. (Momenteel werk ik niet veel thuis dit komt, omdat ik denk dat ik goed op schema loop maar als ik thuis werk zal het mij veel meer werk gaan schelen uiteindelijk.)
+-   Meer aan mijn project thuis werken. (Momenteel werk ik niet veel thuis dit komt, omdat ik denk dat ik goed op schema loop maar als ik thuis werk zal het mij veel meer werk gaan schelen uiteindelijk.)
 
-- Consistent blijven documenteren (Consistent gaan documenteren is ook een punt waar ik moet aan gaan werken. Zo moet ik na elke functie gaan documenteren en niet na een bepaalde tijd.)
-
+-   Consistent blijven documenteren (Consistent gaan documenteren is ook een punt waar ik moet aan gaan werken. Zo moet ik na elke functie gaan documenteren en niet na een bepaalde tijd.)
 
 ### - Herhaal
 
@@ -55,13 +52,10 @@
 
 -   Op tijd komen (Moet zoals gewoonlijk optijd komen zodat ik geen belangrijke informatie mis.)
 
-
 ### - Stop
 
-- Documentatie als logboek opschrijven (Ik heb dit gelukkig optijd gedaan, maar mijn documentatie moet op basis van code zijn en niet wat ik die dag ga doen.)
+-   Documentatie als logboek opschrijven (Ik heb dit gelukkig optijd gedaan, maar mijn documentatie moet op basis van code zijn en niet wat ik die dag ga doen.)
 
--  Niet aan meerdere issues tegelijk werken (Hierdoor wordt het lastig om op 1 ding te focussen en komt er vertraging.)
+-   Niet aan meerdere issues tegelijk werken (Hierdoor wordt het lastig om op 1 ding te focussen en komt er vertraging.)
 
 # Gedragscriteria
-
-

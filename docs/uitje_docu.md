@@ -39,8 +39,8 @@ Om een uitje in mijn database te zetten. Dit heb ik gedaan coor een knop aan te 
 Vervolgens is er een functie zetIn(); hierin heb ik de inputs gedefinieerd en een constante eraan vast gezet. vervolgens heb ik de query: await runQuery("INSERT INTO event (description, price) VALUES (?)", [uitje, prijs]);
 
 Met deze query inject hij de bovenstaande data in de database.
-</details>
 
+</details>
 
 <details>
 #uitjes laten zien
@@ -58,6 +58,7 @@ Met deze query inject hij de bovenstaande data in de database.
         // Een bericht weergeven als er geen gegevens zijn
         data.textContent = "Geen gegevens gevonden";
     }
+
 }
 </code>
 

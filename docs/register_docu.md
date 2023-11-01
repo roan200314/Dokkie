@@ -11,6 +11,7 @@
 </code>
 
 Met bovenstaande code maak ik drie variabelen aan. Deze variabelen maak ik gelijk aan de Id in het HTML element.
+
 </details>
 
 <details>
@@ -37,4 +38,5 @@ Met bovenstaande code maak ik een nieuwe variable waar de input gelijk staat aan
     </code>
 
 Met deze code kijk ik of een van de input velden leeg zijn. Als dat zo het geval is krijg je een alert dat een paar gegevens niet zijn ingevuld. Zo niet gaat die naar de else statement en krijg je een alert dat het succesvol is gelukt.
+
 </details>

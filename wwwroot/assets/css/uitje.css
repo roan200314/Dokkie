@@ -1,11 +1,12 @@
 body {
     font-size: 1.2em;
     background-color: #e8e8e8;
-    font-family: "Anton", sans-serif;
+    /* font-family: "Anton", sans-serif; */
 }
 
 /* Stijlen voor de container */
 .container {
+    font-family: sans-serif;
     background-color: #eddbda;
     width: 33%;
     border-radius: 33%;
@@ -13,6 +14,7 @@ body {
 
 /* Stijlen voor het formulier */
 .form {
+    font-family: sans-serif;
     width: 60%;
     margin-left: 20%;
     padding-bottom: 15px;
@@ -29,6 +31,7 @@ body {
 .buttonuit {
     font-size: 16px;
     box-shadow: 1px 4px;
+    margin-top: 44px;
 }
 
 .buttonuit:hover {
@@ -49,6 +52,7 @@ body {
 
 /* Stijlen voor alle uitjes */
 .alleUitjes {
+    font-family: sans-serif;
     border-width: 2px;
     border-style: solid;
     border-color: #333;
@@ -101,6 +105,25 @@ body {
     padding: 10px;
     cursor: pointer;
 }
+.spanUitje {
+    position: relative;
+    top: 0px;
+}
+
+.spanPrijs {
+    position: relative;
+    top: 20px;
+}
+
+#uit {
+    position: relative;
+    top: 0px;
+}
+
+#prijs {
+    position: relative;
+    top: 20px;
+}
 
 /* Responsieve stijlen */
 @media only screen and (max-width: 850px) {
@@ -119,7 +142,7 @@ body {
     /* Aanpassing voor de knop om aan een uitje deel te nemen in responsieve modus */
     .joinUitje {
         width: 102px;
-        height: 30px;
+        height: fit-content;
         position: relative;
         top: -40px;
     }
@@ -127,16 +150,41 @@ body {
     /* Aanpassing voor de knop om een uitje aan te passen in responsieve modus */
     .bewerkUitje {
         margin-bottom: 30px;
-        height: 30px;
+        height: fit-content;
         position: relative;
         top: -56px;
     }
 
+    .buttonuit {
+        font-size: 16px;
+        box-shadow: 1px 4px;
+        margin-top: 69px;
+    }
     /* Aanpassing voor de knop om een uitje af te sluiten in responsieve modus */
     .sluitUitje {
         display: flex;
         justify-content: center;
         padding: 10px;
         width: 100%;
+    }
+
+    .spanUitje {
+        position: relative;
+        top: 0px;
+    }
+
+    .spanPrijs {
+        position: relative;
+        top: 30px;
+    }
+
+    #uit {
+        position: relative;
+        top: 0px;
+    }
+
+    #prijs {
+        position: relative;
+        top: 30px;
     }
 }

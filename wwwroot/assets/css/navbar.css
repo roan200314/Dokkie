@@ -5,6 +5,7 @@
 /* Stijlen voor de navigatiebalk */
 .navbar {
     /* Geen onderstreping voor koppelingen */
+    font-family: "Anton", sans-serif;
     text-decoration: none;
     display: flex;
     align-content: center;

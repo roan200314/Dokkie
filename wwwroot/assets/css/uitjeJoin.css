@@ -2,11 +2,12 @@
 body {
     font-size: 1.2em;
     background-color: #e8e8e8;
-    font-family: "Anton", sans-serif;
+    /* font-family: "Anton", sans-serif; */
 }
 
 /* Stijlen voor de container */
 .container {
+    font-family: sans-serif;
     background-color: #eddbda;
     width: 33%;
     border-radius: 33%;
@@ -29,6 +30,7 @@ body {
 
 /* Stijlen voor namen */
 .namen {
+    color: #e8e8e8;
     position: relative;
     right: 272px;
     top: 26px;

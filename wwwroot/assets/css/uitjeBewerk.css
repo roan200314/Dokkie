@@ -2,7 +2,7 @@
 body {
     font-size: 1.2em;
     background-color: #e8e8e8;
-    font-family: "Anton", sans-serif;
+    /* font-family: "Anton", sans-serif; */
 }
 
 /* Stijlen voor de container */
@@ -29,17 +29,20 @@ body {
 
 /* Stijlen voor tekst die bewerkt wordt */
 .textBewerk {
+    color: #e8e8e8;
     position: relative;
     left: 350px;
 }
 
 /* Stijlen voor de prijs en naam */
 .prijsNaam {
+    color: #e8e8e8;
     display: flex;
 }
 
 /* Stijlen voor de bewerkingsdiv */
 .bewerkDiv {
+    color: #e8e8e8;
     display: flex;
     margin-top: 15px;
     width: fit-content;

@@ -9,8 +9,8 @@ Eerste week heb ik vooral besteed aan de landingspagina. Zo was ik met losse pol
 Tweede week ben ik bezig geweest met het responisive maken en teksten op het scherm te zetten.
 Ook ben ik begonnen met een pagina maken om een uitje op het scherm te zetten.
 
-
 <!-- KLEUREN PAGINA'S################################################ -->
+
 Ik heb voor mijn pagina's de volgende kleuren vooral gebruikt:
 
 <code>
@@ -19,7 +19,7 @@ en
 color: #5c20a1;
 </code>
 
-Deze kleuren heb ik gekozen, omdat ik ongeveer dezelfde kleuren wilde gebruiken als Tikkie.  
+Deze kleuren heb ik gekozen, omdat ik ongeveer dezelfde kleuren wilde gebruiken als Tikkie.
 
 <!-- EINDE KLEUREN PAGINA -->
 
@@ -29,7 +29,6 @@ Ik heb de FavIcon met een website gemaakt genaamd: https://favicon.io/favicon-ge
 Hierbij heb ik gekozen voor dezelfde kleuren als mijn pagina, en heb ik de letter D erbij gezet van Dokkie.
 
 <!-- EINDE FAVICON -->
-
 
 -   Begonnen met logica
 
@@ -55,4 +54,3 @@ console.error(error);
 </code>
 
 Met deze code heb ik een manier gemaakt waarin ik alleen de code hoef aan te roepen om een query in mijn database te zetten.
-

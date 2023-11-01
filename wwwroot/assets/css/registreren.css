@@ -2,7 +2,7 @@
 body {
     font-size: 1.2em;
     background-color: #e8e8e8;
-    font-family: "Anton", sans-serif;
+    /* font-family: "Anton", sans-serif; */
 }
 
 /* Stijlen voor de container */
@@ -21,6 +21,7 @@ body {
 
 /* Stijlen voor de registratietekst */
 #regi {
+    color: #e8e8e8;
     font-size: 28px;
 }
 
@@ -40,6 +41,7 @@ body {
 
 /* Stijlen voor het e-mail label */
 #emailSpan {
+    color: #e8e8e8;
     position: relative;
     left: -26px;
     top: 5px;
@@ -47,6 +49,7 @@ body {
 
 /* Stijlen voor het wachtwoord label */
 #wachtwoordSpan {
+    color: #e8e8e8;
     position: relative;
     left: 0px;
     top: 4px;
@@ -54,6 +57,7 @@ body {
 
 /* Stijlen voor het gebruikersnaam label */
 #userSpan {
+    color: #e8e8e8;
     position: relative;
     left: 15px;
     top: 5px;
