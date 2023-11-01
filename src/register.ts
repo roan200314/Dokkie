@@ -17,9 +17,9 @@ async function zetIn(): Promise<void> {
     if (!email.trim() || !password.trim() || !username.trim()) {
       alert("Een of meerdere gegevens niet ingevuld.");
     } else {
+      //insert in de database
         alert("Succesvol registreerd.");
+        await runQuery("INSERT INTO user (email, password, username) VALUES (?)", [email, password, username]);
     }
 
-    //insert in de database
-    await runQuery("INSERT INTO user (email, password, username) VALUES (?)", [email, password, username]);
 }
