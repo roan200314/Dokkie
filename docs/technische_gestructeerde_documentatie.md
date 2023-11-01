@@ -13,11 +13,31 @@ Ook ben ik begonnen met een pagina maken om een uitje op het scherm te zetten.
 
 Ik heb voor mijn pagina's de volgende kleuren vooral gebruikt:
 
+Voor de homepagina heb ik:
 <code>
 background-color: #e8e8e8;
+</code>
 en
+<code>
 color: #5c20a1;
 </code>
+
+voor de andere pagina's heb ik background-color:
+<code>
+background-color: #eddbda;
+</code>
+
+voor de form kleur heb ik gekozen voor:
+<code>
+background-color: #5c20a1;
+</code>
+
+en voor de tekst had ik eerst zwart gekozen, vervolgens had ik een contrast test gedaan op de website:
+
+https://dequeuniversity.com/rules/axe/4.7/color-contrast
+
+Hieruit was gebleken dat mijn kleuren combinatie niet gebruiksvriendelijk waren. Hierdoor heb ik gekozen om de tekst wit te maken en de form kleur iets lichter te maken. 
+
 
 Deze kleuren heb ik gekozen, omdat ik ongeveer dezelfde kleuren wilde gebruiken als Tikkie.
 
@@ -54,3 +74,11 @@ console.error(error);
 </code>
 
 Met deze code heb ik een manier gemaakt waarin ik alleen de code hoef aan te roepen om een query in mijn database te zetten.
+
+hier wordt dus eerst een connectie gemaakt met mijn database door de import.
+
+vervolgens maak ik een asynchronische functie die 2 parameters op kan nemen.'query' en 'params'.
+Als het niet succesvol is gegaan gaat de functie door naar de catch en krijg je een console error te zien.
+
+
+
