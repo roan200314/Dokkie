@@ -14,6 +14,9 @@ body {
 
 /* Stijlen voor het uitje */
 .uitje {
+    font-family: sans-serif;
+
+    color: #e8e8e8;
     width: 60%;
     height: fit-content;
     margin-left: 20%;

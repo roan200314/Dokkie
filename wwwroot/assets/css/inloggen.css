@@ -7,6 +7,8 @@ body {
 
 /* Stijlen voor de container */
 .container {
+    font-family: sans-serif;
+    color: #e8e8e8;
     width: 60%;
     height: 200px;
     margin-left: 20%;
