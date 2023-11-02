@@ -4,10 +4,7 @@ Beschrijf hier wat je geleerd hebt op gebied van de beroepscriteria uit de opdra
 
 # documentatie
 
-Eerste week heb ik vooral besteed aan de landingspagina. Zo was ik met losse pols begonnen met programmeren. Ik had al eerst een grid container gemaakt om mijn gegevens in te zetten. Daarna was ik verder gegaan met de CSS van de website. Daarna had ik de connectie gemaakt met de database en de database geimporteerd in PHPmyAdmin. Zo was ik klaar met mijn eerste userstory.
-
-Tweede week ben ik bezig geweest met het responisive maken en teksten op het scherm te zetten.
-Ook ben ik begonnen met een pagina maken om een uitje op het scherm te zetten.
+Dokkie is een website waar je uitjes in kan opslaan zodat jouw vrienden of famillie jou simpel kunnen terug betalen. 
 
 <!-- KLEUREN PAGINA'S################################################ -->
 
