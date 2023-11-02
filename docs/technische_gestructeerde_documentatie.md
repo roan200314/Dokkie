@@ -56,7 +56,6 @@ Hierbij heb ik gekozen voor dezelfde kleuren als mijn pagina, en heb ik de lette
 
 ![FavIcon](../docs/pics/favIcon.png)
 
-![FavIcon](../docs/pics/favIcon.png)
 
 </details>
 <!-- EINDE FAVICON -->
