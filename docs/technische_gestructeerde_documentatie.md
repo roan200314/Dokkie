@@ -60,7 +60,11 @@ Hierbij heb ik gekozen voor dezelfde kleuren als mijn pagina, en heb ik de lette
 </details>
 <!-- EINDE FAVICON -->
 
+<details>
+<summary>Logica connectie DB</summary>
 -   Begonnen met logica
+
+
 
 Ik heb toen de typscript documenten aangemaakt om te gaan beginnen met logica. Dit hbe ik aangepakt door eerst te leren te komen wat voor taal Typescript is. Zo heb ik eerst video's bekeken en online gekeken waar Typescript op lijkt en hoe je basis functies maakt.
 
@@ -90,5 +94,5 @@ hier wordt dus eerst een connectie gemaakt met mijn database door de import.
 vervolgens maak ik een asynchronische functie die 2 parameters op kan nemen.'query' en 'params'.
 Als het niet succesvol is gegaan gaat de functie door naar de catch en krijg je een console error te zien.
 
-
+</details>
 
