@@ -48,6 +48,8 @@ Deze kleuren heb ik gekozen, omdat ik ongeveer dezelfde kleuren wilde gebruiken 
 Ik heb de FavIcon met een website gemaakt genaamd: https://favicon.io/favicon-generator/
 Hierbij heb ik gekozen voor dezelfde kleuren als mijn pagina, en heb ik de letter D erbij gezet van Dokkie.
 
+![FavIcon](../docs/pics/favIcon.png)
+
 <!-- EINDE FAVICON -->
 
 -   Begonnen met logica
