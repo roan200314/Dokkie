@@ -13,6 +13,8 @@ Ook ben ik begonnen met een pagina maken om een uitje op het scherm te zetten.
 
 Ik heb voor mijn pagina's de volgende kleuren vooral gebruikt:
 
+<details>
+<summary>Kleuren gebruik</summary>
 Voor de homepagina heb ik:
 <code>
 background-color: #e8e8e8;
@@ -42,14 +44,21 @@ Hieruit was gebleken dat mijn kleuren combinatie niet gebruiksvriendelijk waren.
 Deze kleuren heb ik gekozen, omdat ik ongeveer dezelfde kleuren wilde gebruiken als Tikkie.
 
 <!-- EINDE KLEUREN PAGINA -->
+</details>
+
 
 <!-- FAVICON DOCUMENTATIE -->
 
+<details>
+<summary>FavIcon</summary>
 Ik heb de FavIcon met een website gemaakt genaamd: https://favicon.io/favicon-generator/
 Hierbij heb ik gekozen voor dezelfde kleuren als mijn pagina, en heb ik de letter D erbij gezet van Dokkie.
 
 ![FavIcon](../docs/pics/favIcon.png)
 
+![FavIcon](../docs/pics/favIcon.png)
+
+</details>
 <!-- EINDE FAVICON -->
 
 -   Begonnen met logica
