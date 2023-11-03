@@ -58,4 +58,8 @@
 
 -   Niet aan meerdere issues tegelijk werken (Hierdoor wordt het lastig om op 1 ding te focussen en komt er vertraging.)
 
-# Gedragscriteria
+# retro spective 3
+
+![retro spective](../docs/pics/retro3.jpg)
+
+
