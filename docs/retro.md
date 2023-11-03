@@ -62,4 +62,20 @@
 
 ![retro spective](../docs/pics/retro3.jpg)
 
+### -nieuw
 
+-   sprintdoelen meer stellen.
+
+-   Gelijk bij sprint 1 documenteren
+
+### - Herhaal
+
+-   Vaker code comitten (Ik commit me code vaak als ik een verandering maak aan me pagina, maar dit mag vaker.)
+
+-   buiten lessen werken
+
+### - Stop
+
+-   onlogische tekst bij comitten.
+
+-   Niet aan meerdere issues tegelijk werken (Hierdoor wordt het lastig om op 1 ding te focussen en komt er vertraging.)
